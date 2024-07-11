@@ -2,7 +2,13 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundSize: {
+        '50%': '50%',
+        '100%': '100%',
+        '200%': '200%',
+      }
+    },
   },
   plugins: [],
 }
