@@ -41,19 +41,72 @@
         .pop-animation {
             animation: pop 2s infinite;
         }
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideOut {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .slide-in {
+            animation: slideIn 0.5s forwards;
+        }
+        
+        .slide-out {
+            animation: slideOut 0.5s forwards;
+        }
     </style>
 
 </head>
 <body class="" >
     <header class="bg-overlay bg-cover bg-center bg-no-repeat flex flex-col h-[100vh] text-[#fff]" style="background-image: url('./design/cake.jpg');">
-        <nav>
-            <ul>
-                <li></li>
+        <nav class="p-5 text-[2rem] font-bold ">
+            <ul class="flex flex-row justify-between">
+                <li>
+                    Mopelola
+                </li>
+                <li class="lg:hidden flex">
+                    <img src="Assets/white_menu_icon.svg" alt="menu-icon" id="menu" class="w-[1.5rem]">
+                    <div id="mobileMenu" class="lg:hidden fixed inset-0 bg-[rgba(194,118,133,0.8)] flex justify-start items-start p-5 z-10">
+                        <ul class="bg-white text-gray-800 w-3/4 h-[90vh] p-5 space-y-6">
+                            <li class="flex justify-between items-center border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
+                                <span>Home</span>
+                                <img src="Assets/close-icon.svg" alt="close-icon" class="w-5 h-5 cursor-pointer" id="closeDropdown">
+                            </li>
+                            <li class="border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
+                                <a href="#">About Us</a>
+                            </li>
+                            <li class="border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
+                                <a href="#">Shop</a>
+                            </li>
+                            <li class="border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
+                                <a href="#">Personalization</a>
+                            </li>
+                            <li class="border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
+                                <a href="#">New Arrivals</a>
+                            </li>
+                            <li class="border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
+                                <a href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
-        </nav>
+        </nav>        
         <div class="flex flex-col m-auto justify-center text-center lg:mt-auto mt-[9rem]">
             <h1 class="lg:text-[10rem] text-[5.3rem] font-extrabold lg:leading-[8rem] leading-[5rem]">Mopelola Cakes and events</h1>
-            <a href="#" class="text-[#000] border-[1px] border-solid border-[#fff] rounded-md lg:text-[2.5rem] text-[2rem] font-semibold lg:w-[20rem] w-[11rem] bg-transparent hover:bg-[#c27685] hover:text-[#fff] m-auto pop-animation ">
+            <a href="#" class="text-[#000] border-[1px] border-solid border-[#fff] rounded-md lg:text-[2.5rem] text-[2rem] font-semibold lg:w-[20rem] w-[11rem] bg-transparent hover:bg-[#c27685] hover:text-[#fff ] m-auto pop-animation ">
                 View catalogue
             </a>
         </div>
