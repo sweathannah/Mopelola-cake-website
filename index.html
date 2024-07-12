@@ -11,13 +11,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
 
-    <title>Mopelola cakes and event</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap" rel="stylesheet">
 
+    <title>Mopelola cakes and event</title>
     <style>
         body {
             font-family: 'Alex Brush';
         }
-
         .bg-overlay::before {
             content: "";
             position: absolute;
@@ -25,10 +27,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(128, 0, 128, 0.1);
+            background: #8000801a;
             z-index: 0;
         }
-
         @keyframes pop {
             0%, 100% {
                 transform: scale(1);
@@ -37,7 +38,6 @@
                 transform: scale(1.1);
             }
         }
-
         .pop-animation {
             animation: pop 2s infinite;
         }
@@ -49,7 +49,6 @@
                 transform: translateX(0);
             }
         }
-
         @keyframes slideOut {
             0% {
                 transform: translateX(0);
@@ -58,28 +57,50 @@
                 transform: translateX(-100%);
             }
         }
-
         .slide-in {
             animation: slideIn 0.5s forwards;
         }
-
         .slide-out {
             animation: slideOut 0.5s forwards;
         }
-    </style>
+</style>
 
+    </style>
 </head>
-<body class="" >
+<body>
     <header class="bg-overlay bg-cover bg-center bg-no-repeat flex flex-col h-[100vh] text-[#fff]" style="background-image: url('./design/cake.jpg');">
-        <nav class="p-5 text-[2rem] font-bold ">
+        <nav class="p-7 text-[2rem] font-bold ">
             <ul class="flex flex-row justify-between">
-                <li>
-                    Mopelola
-                </li>
+                <div>
+                    <li>Mopelola</li>
+                </div>
+                <div class="lg:flex flex-row hidden font-[Inika] text-[1rem] font-thin space-x-10">
+                    <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid">
+                        <a href="#">About Us</a>
+                    </li>
+                    <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid">
+                        <a href="#">Catalogue</a>
+                    </li>
+                    <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid">
+                        <a href="#">Client Testimonials</a>
+                    </li>
+                    <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid">
+                        <a href="#">Behind The Scene </a>
+                    </li>
+                    <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid">
+                        <a href="#">Contact Us</a>
+                    </li>
+                    <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid">
+                        <a href="#">Order Online</a>
+                    </li>                   
+                </div>
                 <li class="lg:hidden flex">
-                    <img src="Assets/white_menu_icon.svg" alt="menu-icon" id="menu" class="w-[1.5rem]">
-                    <div id="mobileMenu" class="hidden fixed inset-0 bg-[rgba(194,118,133,0.8)] justify-start items-start p-5 z-10">
-                        <ul class="bg-white text-gray-800 w-3/4 h-[90vh] p-5 space-y-6">
+                    <img src="Assets/white_menu_icon.svg" alt="menu-icon" id="menu" class="w-[1.5rem] cursor-pointer">
+                    <div id="mobileMenu" class="fixed inset-0 bg-[rgba(194,118,133,0.8)] justify-start items-start p-5 z-10 hidden">
+                        <ul class="bg-white text-gray-800 w-3/4 h-[90vh] p-5 space-y-6 slide-in">
                             <li class="flex justify-between items-center border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
                                 <span>Home</span>
                                 <img src="Assets/close-icon.svg" alt="close-icon" class="w-5 h-5 cursor-pointer" id="closeDropdown">
@@ -88,32 +109,171 @@
                                 <a href="#">About Us</a>
                             </li>
                             <li class="border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
-                                <a href="#">Shop</a>
+                                <a href="#">catalogue</a>
                             </li>
                             <li class="border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
-                                <a href="#">Personalization</a>
+                                <a href="#">Client Testimonials</a>
                             </li>
                             <li class="border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
-                                <a href="#">New Arrivals</a>
+                                <a href="#">Behind The Scene </a>
                             </li>
                             <li class="border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
-                                <a href="#">Contact</a>
+                                <a href="#">Contact Us</a>
                             </li>
+                            <li class="border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
+                                <a href="#">Order Online</a>
+                            </li>                            
                         </ul>
                     </div>
                 </li>
             </ul>
-        </nav>        
+        </nav>          
         <div class="flex flex-col m-auto justify-center text-center lg:mt-auto mt-[9rem]">
             <h1 class="lg:text-[10rem] text-[5.3rem] font-extrabold lg:leading-[8rem] leading-[5rem]">Mopelola Cakes and events</h1>
-            <a href="#" class="text-[#000] border-[1px] border-solid border-[#fff] rounded-md lg:text-[2.5rem] text-[2rem] font-semibold lg:w-[20rem] w-[11rem] bg-transparent hover:bg-[#c27685] hover:text-[#fff ] m-auto pop-animation ">
+            <a href="#" class="text-[#000] border-[1px] border-solid border-[#fff] rounded-md lg:text-[2.5rem] text-[2rem] font-semibold lg:w-[20rem] w-[11rem] bg-transparent hover:bg-[#c27685] hover:text-[#fff] m-auto pop-animation">
                 View catalogue
             </a>
         </div>
     </header>
-    <main class="flex h-[100%] justify-center text-center">
-        
+    <main class="bg-[#FFDAB9] lg:p-[4rem] p-[0.5rem]">
+        <section class="flex flex-col mx-auto">
+            <h2 class="lg:text-[5rem] text-[2.5rem] font-extrabold text-gray-800 mb-4 text-center">Our Story in Motion</h2>
+            <article class="overflow-x-auto scrolling-content flex space-x-6 scroll-smooth whitespace-nowrap pb-10">
+                <!-- lARGE SCREEN STORIES-->
+                <div class="min-w-[40rem] lg:flex hidden shadow-cyan-500/50">
+                    <div class="bg-white w-[50%] rounded-l-3xl p-6 flex flex-col justify-center">
+                        <h3 class="text-4xl text-left font-semibold mb-2 text-[#ec499a]">The Wedding Cake <br> Experience</h3>
+                        <p class="text-gray-700 my-2 font-[Inika] w-10">Can a cake tell a love story?<br> We believe it can! <br> Let us be a part of your journey,<br> creating a sweet memory that will <br> linger in every heart.</p>
+                        <a href="#" class="font-[Inika] bg-[#ec499a] text-[#fff] text-center rounded-full w-[9rem] h-[3rem] pt-[0.7rem] mt-[1rem] transform transition-transform duration-300 hover:scale-110 hover:font-bold">
+                            View varieties
+                        </a>
+                        
+                    </div>
+                    <div class="bg-[#ec499a] w-[50%] rounded-r-3xl p-6 flex flex-col justify-center">
+                        <img src="Assets/1720779384495.png" alt="Cake" class="w-[15rem]">
+                    </div>                    
+                </div>
+                <div class="lg:min-w-[40rem] min-w-[350px] lg:flex hidden shadow-cyan-500/50">
+                    <div class="bg-white w-[50%] rounded-l-3xl p-6 flex flex-col justify-center">
+                        <h3 class="text-[2.1rem] text-left font-semibold mb-2 text-[#ec499a]">
+                            A Crunchy Celebration
+                        </h3>
+                        <p class="text-gray-700 my-2 font-[Inika] w-10">
+                            As Julia Child once said, <br> 'People who love to eat are always <br> the best people.' <br> Indulge in our chinchin and join <br> the best  people on a delightful <br> journey of taste and happiness.
+                        </p>
+                        <a href="#" class="font-[Inika] bg-[#ec499a] text-[#fff] text-center rounded-full w-[9rem] h-[3rem] pt-[0.7rem] mt-[1rem] transform transition-transform duration-300 hover:scale-110 hover:font-bold">
+                            View varieties
+                        </a>
+                        
+                    </div>
+                    <div class="bg-[#ec499a] w-[50%] rounded-r-3xl lg:p-6 p-2 flex flex-col justify-center">
+                        <img src="Assets/1720792072036.png" alt="Chin-chin in container" class="lg:w-[15rem] w-[full] ">
+                    </div>                    
+                </div>
+                <div class="lg:min-w-[40rem] min-w-[350px] lg:flex hidden shadow-cyan-500/50">
+                    <div class="bg-white w-[50%] rounded-l-3xl p-6 flex flex-col justify-center">
+                        <h3 class="lg:text-4xl text-2xl text-left font-semibold mb-2 text-[#ec499a]">
+                            Softness that <br> Melts in Your Mouth
+                        </h3>
+                        <p class="text-gray-700 my-2 font-[Inika] w-10">
+                            One cannot think well, <br> love well, or even sleep well, <br> if one has not dined well. <br>  Our eggrolls, crispy on the <br> outside and tender on the inside, <br>will make you believe it
+                        </p>
+                        <a href="#" class="font-[Inika] bg-[#ec499a] text-[#fff] text-center rounded-full w-[9rem] h-[3rem] pt-[0.7rem] mt-[1rem] transform transition-transform duration-300 hover:scale-110 hover:font-bold">
+                            View varieties
+                        </a>
+                        
+                    </div>
+                    <div class="bg-[#ec499a] w-[50%] rounded-r-3xl lg:p-6 p-2 flex flex-col justify-center">
+                        <img src="Assets/1720781465493.png" alt="eggrolls in plates" class="lg:w-[15rem] w-[full] ">
+                    </div>                    
+                </div>
+                <div class="lg:min-w-[40rem] min-w-[350px] lg:flex hidden shadow-cyan-500/50">
+                    <div class="bg-white w-[50%] rounded-l-3xl p-6 flex flex-col justify-center">
+                        <h3 class="lg:text-4xl text-2xl text-left font-semibold mb-2 text-[#ec499a]">
+                            Softness that <br> Melts in Your Mouth
+                        </h3>
+                        <p class="text-gray-700 my-2 font-[Inika] w-10">
+                            One cannot think well, <br> love well, or even sleep well, <br> if one has not dined well. <br>  Our eggrolls, crispy on the <br> outside and tender on the inside, <br>will make you believe it
+                        </p>
+                        <a href="#" class="font-[Inika] bg-[#ec499a] text-[#fff] text-center rounded-full w-[9rem] h-[3rem] pt-[0.7rem] mt-[1rem] transform transition-transform duration-300 hover:scale-110 hover:font-bold">
+                            View varieties
+                        </a>
+                        
+                    </div>
+                    <div class="bg-[#ec499a] w-[50%] rounded-r-3xl lg:p-6 p-2 flex flex-col justify-center">
+                        <video src="Assets/Roasting chicken wings .mp4" autoplay loop playsinline>
+                            Your browser does not support the video tag.
+                        </video>
+                        <!-- <div class="relative w-full h-0 pb-[56.25%] mb-8"> <!-- 16:9 aspect ratio
+                            <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div> -->
+                    </div>                    
+                </div>
+                <!-- MOBILE SCREEN STORY 1 -->
+                <div class="min-w-[350px] lg:hidden flex shadow-cyan-500/50">
+                    <div class="bg-white w-[50%] rounded-l-3xl p-4 flex flex-col justify-center">
+                        <h3 class="lg:text-4xl text-2xl text-left font-semibold mb-2 text-[#ec499a]">The Wedding<br> Cake Experience</h3>
+                        <p class="text-gray-700 my-2 font-[Inika] w-10 flex text-left">Let us be a part<br> of your journey <br> creating a sweet <br> memory that will <br> linger in every heart.</p>
+                        <a href="#" class="font-[Inika] bg-[#ec499a] text-[#fff] text-center rounded-full w-[9rem] h-[3rem] pt-[0.7rem] mt-[1rem] transform transition-transform duration-300 hover:scale-110 hover:font-bold">
+                            View varieties
+                        </a>
+                        
+                    </div>
+                    <div class="bg-[#ec499a] w-[50%] rounded-r-3xl lg:p-6 p-2 flex flex-col justify-center">
+                        <img src="Assets/1720779384495.png" alt="Cake" class="lg:w-[15rem] w-[full] ">
+                    </div>                    
+                </div>
+                <div class="min-w-[350px] lg:hidden flex shadow-cyan-500/50">
+                    <div class="bg-white w-[50%] rounded-l-3xl p-4 flex flex-col justify-center">
+                        <h3 class="text-3xl text-left font-semibold mb-2 text-[#ec499a]">A Crunchy <br> Celebration</h3>
+                        <p class="text-gray-700 my-2 font-[Inika] w-10 flex text-left">Indulge in our <br> chinchin and join the <br> best people on a<br>delightful journey of <br>taste and happiness.</p>
+                        <a href="#" class="font-[Inika] bg-[#ec499a] text-[#fff] text-center rounded-full w-[9rem] h-[3rem] pt-[0.7rem] mt-[1rem] transform transition-transform duration-300 hover:scale-110 hover:font-bold">
+                            View varieties
+                        </a>
+                        
+                    </div>
+                    <div class="bg-[#ec499a] w-[50%] rounded-r-3xl lg:p-6 p-2 flex flex-col justify-center">
+                        <img src="Assets/1720792072036.png" alt="Chin-chin in container" class="lg:w-[15rem] w-[full] ">
+                    </div>                    
+                </div>
+                <div class="min-w-[350px] lg:hidden flex shadow-cyan-500/50">
+                    <div class="bg-white w-[50%] rounded-l-3xl p-4 flex flex-col justify-center">
+                        <h3 class="lg:text-4xl text-2xl text-left font-semibold mb-2 text-[#ec499a]">
+                            Softness that <br> Melts in Your <br> Mouth
+                        </h3>
+                        <p class="text-gray-700 my-2 font-[Inika] w-10 flex text-left">
+                            One cannot think <br> well, or even sleep <br> well, if one has <br> not dined well. Our <br> eggrolls will make <br> you believe it
+                        </p>
+                        <a href="#" class="font-[Inika] bg-[#ec499a] text-[#fff] text-center rounded-full w-[9rem] h-[3rem] pt-[0.7rem] mt-[1rem] transform transition-transform duration-300 hover:scale-110 hover:font-bold">
+                            View varieties
+                        </a>
+                        
+                    </div>
+                    <div class="bg-[#ec499a] w-[50%] rounded-r-3xl lg:p-6 p-2 flex flex-col justify-center">
+                        <img src="Assets/1720781465493.png" alt="eggrolls in plates" class="lg:w-[15rem] w-[full] ">
+                    </div>                    
+                </div>
+
+
+                <!-- lARGE SCREEN STORY 2
+                <div class="bg-white shadow-lg rounded-3xl lg:min-w-[40rem] lg:h-[20rem] min-w-[300px] flex space-x-32">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-2">VR Behind the Scenes</h3>
+                        <p class="text-gray-700 mt-2">Experience our creative process.</p>
+                    </div>
+                    <div>
+                        <img src="Assets/WhatsApp Image 2024-07-12 at 11.30.27_abf8f016.jpg" alt="VR" class="w-[15rem]">
+                    </div>
+                </div>
+                lARGE SCREEN STORY 3
+                <div class="bg-white p-6 shadow-lg rounded-lg lg:min-w-[40rem] lg:h-[20rem] min-w-[300px] inline-block ">
+                    <h3 class="text-2xl font-semibold mb-2">Contact Us</h3>
+                    <p class="text-gray-700 mt-2">Reach out for custom orders and inquiries.</p>
+                    <a href="contact-page-link" class="text-blue-500 hover:underline">Get in Touch</a>
+                </div> -->
+            </article>
+        </section>
     </main>
-    <script src="main.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>
