@@ -18,6 +18,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <link rel="shortcut icon" href="Assets/Icons/logo.jpg" type="image/x-icon">
     <title>Mopelola cakes and event</title>
 
     <style>
@@ -67,8 +68,6 @@
         .slide-out {
             animation: slideOut 0.5s forwards;
         }
-</style>
-
     </style>
 </head>
 <body>
@@ -89,13 +88,7 @@
                         <a href="#">Catalogue</a>
                     </li>
                     <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid">
-                        <a href="#">Client Testimonials</a>
-                    </li>
-                    <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid">
                         <a href="#">Behind The Scene </a>
-                    </li>
-                    <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid">
-                        <a href="#">Contact Us</a>
                     </li>
                     <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid">
                         <a href="#">Order Online</a>
@@ -350,11 +343,11 @@
             </article>
         </section>
         <!-- FEEDBACKS -->
-        <section class=" mt-[1.875rem] mb-[3.75rem] flex flex-col bg-[#FCFCFC]">
+        <section class=" mt-[1.875rem] mb-[rem] flex flex-col bg-[#FCFCFC]" id="FEEDBACKS">
             <h2 class="font-[700] lg:text-[4.5rem] text-[3rem] text-[#ec499a] m-auto my-[2rem]">
                 Client Testimonials
             </h2>
-            <article class="lg:w-[79rem] w-[100vw] rounded-[1.8rem] m-auto bg-[#FCDAFF1A] lg:flex block flex-row justify-between py-[4.1rem]">
+            <article class="w-[100%] rounded-[1.8rem] m-auto bg-[#FCDAFF1A] lg:flex block flex-row justify-between py-[4.1rem]">
                 <div class="lg:w-[22.68rem] w-[80%] h-[24.5rem] flex flex-col m-auto" data-aos="zoom-out-down" data-aos-duration="800">
                     <div class="bg-[#FCDAFF1A] rounded-t-[1.9rem] pt-[2.75rem] px-[2.3rem]  flex flex-col h-[14.5rem]">
                         <p class="lg:w-[17.8rem] w-[15rem] font-[Inika] text-[0.875rem] text-gray-700 items-start
@@ -400,9 +393,9 @@
             </article>
         </section>
         <!-- CONTACT -->
-        <section class="bg-[#FFDAB9] text-[#fff]">
-            <article>
-                <img src="Assets/Screenshot 2024-07-13 201222.jpg" alt="" class="w-full">
+        <section class="bg-[#FFDAB9] text-[#fff]" id="Contact">
+            <article class="lg:hidden block">
+                <img src="Assets/Pastries/Food_tray.jpg" class="w-full" >
             </article>
             <article class=" w-full lg:p-[4rem] p-[0.5rem]">
                 <h5 class="lg:text-[6rem] text-[3.7rem] font-bold m-auto w-fit">Contact us</h5>
@@ -420,20 +413,22 @@
                                 <span>Shop4 oloje estate junction Oke-fomo, Ilorin, Kwara State.</span>
                             </p>
                         </div>
-                        <div class="w-[16rem] mx-auto my-[2rem]">
-                            <h6 class="font-[800] mb-[1rem] ml-16">Contacts</h6>
-                            <a href="tel:+2348125372350
-                            " class="font-sans text-[#ec499a] text-[1rem] flex">
-                            <img src="Assets/Icons/tel_icon.svg" alt="tel_icon" class="mr-[1rem]">
-                            <span>(+234) 812 537 2350</span>
-                            </a>
-                            <a href="tel:+2347036117659" class="font-sans text-[#ec499a] text-[1rem] block ml-[2.5rem]">
-                                (+234) 703 611 7659
-                            </a>
+                        <div class="w-[16rem] lg:my-0 my-[2rem] ">
+                            <h6 class="font-[800] mb-[1rem] lg:ml-16 ml-20">Contacts</h6>
+                            <div class="ml-5">
+                                <a href="tel:+2348125372350
+                                " class="font-sans text-[#ec499a] text-[1rem] flex">
+                                    <img src="Assets/Icons/tel_icon.svg" alt="tel_icon" class="mr-[1rem]">
+                                    <span>(+234) 812 537 2350</span>
+                                </a>
+                                <a href="tel:+2347036117659" class="font-sans text-[#ec499a] text-[1rem] block ml-[2.5rem]">
+                                    (+234) 703 611 7659
+                                </a>
+                            </div>
                         </div>
                         <div class="w-[16rem] mx-auto">
-                            <h6 class="font-[800] mb-[1rem] ml-14">Others</h6>
-                            <div class="flex space-x-3">
+                            <h6 class="font-[800] mb-[1rem] ml-20">Others</h6>
+                            <div class="flex space-x-3 ml-7">
                                 <a href="https://web.facebook.com/shukurah.salimonalasinrin">
                                     <img src="Assets/Icons/facebook_icon.svg" alt="facebook_icon">
                                 </a>
@@ -453,6 +448,55 @@
             </article>
         </section>
     </main>
+    <footer class="bg-[#d0878c] flex justify-between w-full">
+        <div>
+            <img src="Assets/1721034980858.png" alt="chef mopelola" class="w-[25rem]">
+        </div>
+        <section  class="w-fit m-auto flex justify-between font-[Inika] font-semibold text-[#f1e5e6] items-center pt-[4rem]">
+            <div>
+                <ul class=" w-fit space-y-3">
+                    <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid w-fit">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid w-fit">
+                        <a href="#">About Us</a>
+                    </li>
+                    <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid w-fit">
+                        <a href="#">Catalogue</a>
+                    </li>
+                    <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid w-fit">
+                        <a href="index.html#FEEDBACKS">Client Testimonials</a>
+                    </li>
+                    <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid w-fit">
+                        <a href="#">Behind The Scene </a>
+                    </li>
+                    <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid w-fit">
+                        <a href="index.html#Contact">Contact Us</a>
+                    </li>
+                    <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid w-fit">
+                        <a href="#">Order Online</a>
+                    </li> 
+                </ul>
+            </div>
+            <div class="ml-[15rem]">
+              <ul class="w-[16rem]">
+                <li class=" text-[1rem] flex items-start">
+                    <img src="Assets/Icons/white_locaton_icon.svg" alt="white_locaton_icon" class="w-[1.5rem] mr-4">
+                    <span>Shop4 oloje estate junction Oke-fomo, Ilorin, Kwara State.</span>
+                </li>
+                <li class="my-5">
+                    <a href="tel:+2348125372350" class="font-sans text-[1rem] flex">
+                        <img src="Assets/Icons/white_ohone_icon.svg" alt="tel_icon" class="mr-[1rem]">
+                        <span>(+234) 812 537 2350</span>
+                    </a>
+                    <a href="tel:+2347036117659" class="font-sans text-[1rem] block ml-[2.5rem]">
+                        (+234) 703 611 7659
+                    </a>
+                </li>
+              </ul>  
+            </div>
+        </section>
+    </footer>
     <script src="./main.js"></script>
     <script>AOS.init();</script>
 </body>
