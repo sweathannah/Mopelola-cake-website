@@ -1,0 +1,47 @@
+
+body {
+    font-family: 'Alex Brush';
+}
+.bg-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #8000801a;
+    z-index: 0;
+}
+@keyframes pop {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+.pop-animation {
+    animation: pop 2s infinite;
+}
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideOut {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.slide-in {
+    animation: slideIn 0.5s forwards;
+}
+.slide-out {
+    animation: slideOut 0.5s forwards;
+}

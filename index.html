@@ -20,55 +20,7 @@
 
     <link rel="shortcut icon" href="Assets/Icons/logo.jpg" type="image/x-icon">
     <title>Mopelola cakes and event</title>
-
-    <style>
-        body {
-            font-family: 'Alex Brush';
-        }
-        .bg-overlay::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #8000801a;
-            z-index: 0;
-        }
-        @keyframes pop {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
-            }
-        }
-        .pop-animation {
-            animation: pop 2s infinite;
-        }
-        @keyframes slideIn {
-            0% {
-                transform: translateX(-100%);
-            }
-            100% {
-                transform: translateX(0);
-            }
-        }
-        @keyframes slideOut {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-        .slide-in {
-            animation: slideIn 0.5s forwards;
-        }
-        .slide-out {
-            animation: slideOut 0.5s forwards;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="bg-overlay bg-cover bg-center bg-no-repeat flex flex-col h-[100vh] text-[#fff]" style="background-image: url('./design/cake.jpg');">
@@ -329,7 +281,7 @@
                     <p class="lg:w-[45rem] font-[Inika] lg:pl-[10rem] lg:p-0 py-[2rem] mb-[1rem]">
                         Founded by  Salman Shukroh Mopelola, a passionate baker with an eye for detail and a heart full of creativity, Mopelola Cakes and Events started as a ...
                     </p>
-                    <a href="#" class="font-[Inika] bg-[#ec499a] text-[#fff] px-[2rem] py-[1rem] rounded-full w-fit h-fit m-auto">
+                    <a href="about_page.html" class="font-[Inika] bg-[#ec499a] text-[#fff] px-[2rem] py-[1rem] rounded-full w-fit h-fit m-auto">
                         READ MORE
                     </a>
                 </div>
@@ -451,112 +403,67 @@
             </article>
         </section>
     </main>
-    <!-- <footer class="bg-[#d0878c] flex justify-between w-full flex-wrap p-10">
-        <div>
-            <img src="Assets/1721034980858.png" alt="chef mopelola" class="w-[25rem]">
-        </div>
-        <section  class="w-fit my-auto flex flex-row flex-wrap justify-between items-start font-[Inika] font-semibold text-[#f1e5e6]  ">
-            <div>
-                <ul class=" w-fit space-y-3">
-                    <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid w-fit">
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid w-fit">
-                        <a href="#">About Us</a>
-                    </li>
-                    <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid w-fit">
-                        <a href="#">Catalogue</a>
-                    </li>
-                    <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid w-fit">
-                        <a href="index.html#FEEDBACKS">Client Testimonials</a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    
-                    <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid w-fit">
-                        <a href="#">Behind The Scene </a>
-                    </li>
-                    <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid w-fit">
-                        <a href="index.html#Contact">Contact Us</a>
-                    </li>
-                    <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid w-fit">
-                        <a href="#">Order Online</a>
-                    </li> 
-                </ul>
-            </div>
-            <div class="lg:ml-[15rem]">
-              <ul class="w-[16rem]">
-                <li class=" text-[1rem] flex items-start">
-                    <img src="Assets/Icons/white_locaton_icon.svg" alt="white_locaton_icon" class="w-[1.5rem] mr-4">
-                    <span>Shop4 oloje estate junction Oke-fomo, Ilorin, Kwara State.</span>
-                </li>
-                <li class="my-5">
-                    <a href="tel:+2348125372350" class="font-sans text-[1rem] flex">
-                        <img src="Assets/Icons/white_ohone_icon.svg" alt="tel_icon" class="mr-[1rem]">
-                        <span>(+234) 812 537 2350</span>
-                    </a>
-                    <a href="tel:+2347036117659" class="font-sans text-[1rem] block ml-[2.5rem]">
-                        (+234) 703 611 7659
-                    </a>
-                </li>
-              </ul>  
-            </div>
-        </section>
-    </footer> -->
     <footer class="bg-[#ec499a] text-white py-10">
-        <div class="container mx-auto px-6">
-          <div class="flex flex-wrap justify-between">
+        <section class="container mx-auto px-6">
+          <article class="flex flex-wrap justify-between">
                 <!-- Contact Information -->
-                <div class="lg:w-[30%] w-1/2 mb-6">
-                    <h4 class="font-bold text-3xl mb-4 text-gray-700">Contact Us</h4>
-                    <div class="font-[Inika] space-y-3">
-                        <p>Address: Shop4 oloje estate junction Oke-fomo, Ilorin, Kwara State.</p>
-                        <p>Phone: (+234) 812 537 2350</p>
-                        <p>Email: Salimonshukurah246@gmail.com</p>
+                <div class="w-fit flex justify-between gap-5">
+                    <div class="lg:w-[30%] w-1/2 mb-6">
+                        <h4 class="font-bold text-3xl mb-4 text-gray-700">Contact Us</h4>
+                        <div class="font-[Inika]">
+                            <p>Address: Shop4 oloje estate junction Oke-fomo, Ilorin, Kwara State.</p>
+                            <a href="tel:+234812 537 2350" class="my-[1rem] block">Phone: (+234) 812 537 2350</a>
+                            <a href="mailto:Salimonshukurah246@gmail.com">Email: Salimonshukurah <br> 246@gmail.com</a>
+                        </div>
+                    </div>
+                    <!-- Quick Links -->
+                    <div class="lg:w-[30%] w-1/2 mb-6">
+                        <div class="w-fit mx-auto">
+                            <h4 class="font-bold text-3xl mb-4 text-gray-700">Quick Links</h4>
+                            <ul class="font-[Inika] space-y-3">
+                                <li class="mb-2"><a href="#" class="hover:text-gray-300">Home</a></li>
+                                <li class="mb-2"><a href="#" class="hover:text-gray-300">About Us</a></li>
+                                <li class="mb-2"><a href="#" class="hover:text-gray-300">Services</a></li>
+                                <li class="mb-2"><a href="#" class="hover:text-gray-300">Gallery</a></li>
+                                <li class="mb-2"><a href="#" class="hover:text-gray-300">Contact Us</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <!-- Quick Links -->
-                <div class="w-full md:w-1/3 mb-6 md:mb-0">
-                <h4 class="font-bold text-xl mb-4">Quick Links</h4>
-                <ul>
-                    <li class="mb-2"><a href="#" class="hover:text-gray-300">Home</a></li>
-                    <li class="mb-2"><a href="#" class="hover:text-gray-300">About Us</a></li>
-                    <li class="mb-2"><a href="#" class="hover:text-gray-300">Services</a></li>
-                    <li class="mb-2"><a href="#" class="hover:text-gray-300">Gallery</a></li>
-                    <li class="mb-2"><a href="#" class="hover:text-gray-300">Contact Us</a></li>
-                </ul>
-                </div>
                 <!-- Newsletter Signup -->
-                <div class="w-full md:w-1/3 mb-6 md:mb-0">
-                <h4 class="font-bold text-xl mb-4">Newsletter</h4>
-                <p class="mb-4">Sign up for updates and promotions</p>
-                <form>
-                    <input type="email" placeholder="Your email" class="p-2 w-full mb-2 rounded text-black">
-                    <button type="submit" class="bg-white text-[#ec499a] py-2 px-4 rounded hover:bg-gray-200">Subscribe</button>
-                </form>
+                <div class="lg:w-[30%] w-full lg:my-0 my-10">
+                    <h4 class="font-bold text-3xl text-gray-700 mb-4">Newsletter</h4>
+                    <p class="mb-4 font-[Inika]">Sign up for updates and promotions</p>
+                    <form class="font-[Inika]">
+                        <input type="email" placeholder="Your email" class="p-2 w-full mb-2 rounded text-gray-700 focus-within:border-[#ec499a]">
+                        <button type="submit" class="bg-white text-[#ec499a] py-2 px-4 rounded hover:bg-gray-200">Subscribe</button>
+                    </form>
                 </div>
-          </div>
-          <div class="flex flex-wrap justify-between mt-6">
+          </article>
+          <article class="flex flex-wrap justify-between mt-6">
             <!-- Social Media Icons -->
             <div class="w-full md:w-1/2 mb-6 md:mb-0">
-              <h4 class="font-bold text-xl mb-4">Follow Us</h4>
+              <h4 class="font-bold text-2xl text-gray-700 mb-4">Follow Us</h4>
               <div class="flex space-x-4">
-                <a href="#" class="hover:text-gray-300"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="hover:text-gray-300"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="hover:text-gray-300"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="hover:text-gray-300"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://web.facebook.com/shukurah.salimonalasinrin" class="hover:text-gray-300">
+                    <img src="Assets/Icons/white_facebook_icon.svg" alt="white_facebook_icon">
+                </a>
+                <a href="https://www.instagram.com/mopelola_cakes/" class="hover:text-gray-300">
+                    <img src="Assets/Icons/white_instagram_icon.svg" alt="white_instagram_icon">
+                </a>
+                <a href="https://www.tiktok.com/@mopelolacakes0" class="hover:text-gray-300">
+                    <img src="Assets/Icons/white_tiktok_icon.svg" alt="white_tiktok_icon">
+                </a>
               </div>
             </div>
             <!-- Copyright Information -->
             <div class="w-full md:w-1/2 text-right">
               <p>&copy; 2024 Mopelola Cakes and Events. All rights reserved.</p>
             </div>
-          </div>
-        </div>
-      </footer>
-      
+          </article>
+        </section>
+    </footer>
+
     <script src="./main.js"></script>
     <script>AOS.init();</script>
 </body>
