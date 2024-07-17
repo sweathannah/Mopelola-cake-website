@@ -3,48 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalog - Mopelola Cakes and Events</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <link href="./src/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap" rel="stylesheet">
+  
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link rel="shortcut icon" href="Assets/Icons/logo.jpg" type="image/x-icon">
+    <title>Mopelola cakes and event</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-100">
-    <div class="container mx-auto px-4 py-8">
-        <h1 class="text-4xl font-bold text-center text-pink-500 mb-8">Our Catalog</h1>
-        
-        <div class="flex justify-center mb-4">
-            <button class="px-4 py-2 mx-2 bg-pink-500 text-white rounded">Cakes</button>
-            <button class="px-4 py-2 mx-2 bg-pink-500 text-white rounded">Pastries</button>
-            <button class="px-4 py-2 mx-2 bg-pink-500 text-white rounded">Catering Services</button>
+<body>
+    <header class="flex flex-col h-[60vh] bg-[#ec499a] text-white">
+        <nav class="p-7 text-[2rem] font-bold ">
+            <ul class="flex flex-row justify-between">
+                <div>
+                    <li>Mopelola</li>
+                </div>
+                <div class="lg:flex flex-row hidden font-[Inika] text-[1rem] font-thin space-x-10">
+                    <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid">
+                        <a href="about_page.html">About Us</a>
+                    </li>
+                    <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid">
+                        <a href="#">Catalogue</a>
+                    </li>
+                    <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid">
+                        <a href="#">Behind The Scene </a>
+                    </li>
+                    <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid">
+                        <a href="#">Order Online</a>
+                    </li>                   
+                </div>
+                <li class="lg:hidden flex font-[Inika] font-semibold text-[1.3rem]">
+                    <img src="Assets/Icons/white_menu_icon.svg" alt="menu-icon" id="menu" class="w-[1.5rem] cursor-pointer">
+                    <div id="mobileMenu" class="fixed inset-0 bg-[rgba(194,118,133,0.8)] justify-start items-start p-5 z-10 hidden">
+                        <ul class="bg-white text-gray-800 w-3/4 h-[90vh] p-5 space-y-6 slide-in">
+                            <li class="flex justify-between items-center border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
+                                <a href="index.html">Home</a>
+                                <img src="Assets/Icons/close-icon.svg" alt="close-icon" class="w-5 h-5 cursor-pointer" id="closeDropdown">
+                            </li>
+                            <li class="border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
+                                <a href="about_page.html">About Us</a>
+                            </li>
+                            <li class="border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
+                                <a href="#">catalogue</a>
+                            </li>
+                            <li class="border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
+                                <a href="#">Client Testimonials</a>
+                            </li>
+                            <li class="border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
+                                <a href="#">Behind The Scene </a>
+                            </li>
+                            <li class="border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
+                                <a href="#">Contact Us</a>
+                            </li>
+                            <li class="border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
+                                <a href="#">Order Online</a>
+                            </li>                            
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+        </nav> 
+        <div class=" m-auto text-center">
+            <h1 class=" lg:w-[65rem] lg:text-[6rem] text-[4rem] font-bold">Our Catalogue</h1>
+        </div>       
+    </header>
+    <main class="bg-gray-100 px-8">
+        <section class="container mx-auto  pt-[3rem]">
+            <article class="flex justify-center mb-4 font-[Inika] pb-[3rem] ">
+                <button class="px-4 py-2 mx-2 bg-pink-500 hover:bg-pink-950 text-white rounded">Cakes</button>
+                <button class="px-4 py-2 mx-2 bg-pink-500 hover:bg-pink-950 text-white rounded">Pastries</button>
+                <button class="px-4 py-2 mx-2 bg-pink-500 hover:bg-pink-950 text-white rounded">Catering Services</button>
+            </article>
+        </section>
+        <section>
+            <h2 class="w-fit m-auto text-pink-500 text-[4rem] font-bold">Cakes</h2>
+            <article class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product Item -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="Assets/Pastries/Cakes/foil_cakes.jpg" alt="Product 1: foil_cakes" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between ">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Foil Cakes</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#1000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika]">
+                            Moist and flavorful Foil Cakes, available in rich chocolate, vibrant red velvet, and more.
+                        </p>
+                        <a href="order-link-here" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]">
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Repeat Product Item for more products -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://via.placeholder.com/400" alt="Product 2" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold mb-2">Product Name</h2>
+                        <p class="text-gray-700">A brief description of the product goes here. Make it enticing and informative.</p>
+                    </div>
+                </div>
+    
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://via.placeholder.com/400" alt="Product 3" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold mb-2">Product Name</h2>
+                        <p class="text-gray-700">A brief description of the product goes here. Make it enticing and informative.</p>
+                    </div>
+                </div>
+    
+                <!-- Add more products as needed -->
+            </article>
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Product Item -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="https://via.placeholder.com/400" alt="Product 1" class="w-full h-64 object-cover">
-                <div class="p-6">
-                    <h2 class="text-2xl font-bold mb-2">Product Name</h2>
-                    <p class="text-gray-700">A brief description of the product goes here. Make it enticing and informative.</p>
-                </div>
-            </div>
-
-            <!-- Repeat Product Item for more products -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="https://via.placeholder.com/400" alt="Product 2" class="w-full h-64 object-cover">
-                <div class="p-6">
-                    <h2 class="text-2xl font-bold mb-2">Product Name</h2>
-                    <p class="text-gray-700">A brief description of the product goes here. Make it enticing and informative.</p>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="https://via.placeholder.com/400" alt="Product 3" class="w-full h-64 object-cover">
-                <div class="p-6">
-                    <h2 class="text-2xl font-bold mb-2">Product Name</h2>
-                    <p class="text-gray-700">A brief description of the product goes here. Make it enticing and informative.</p>
-                </div>
-            </div>
-
-            <!-- Add more products as needed -->
-        </div>
-    </div>
+    </main>
 </body>
 </html>
