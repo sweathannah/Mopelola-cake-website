@@ -31,10 +31,10 @@
                 </div>
                 <div class="lg:flex flex-row hidden font-[Inika] text-[1rem] font-thin space-x-10">
                     <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid">
-                        <a href="#">Home</a>
+                        <a href="index.html">Home</a>
                     </li>
                     <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid">
-                        <a href="#">About Us</a>
+                        <a href="about_page.html">About Us</a>
                     </li>
                     <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid">
                         <a href="#">Catalogue</a>
@@ -46,16 +46,16 @@
                         <a href="#">Order Online</a>
                     </li>                   
                 </div>
-                <li class="lg:hidden flex">
+                <li class="lg:hidden flex font-[Inika] font-semibold text-[1.3rem]">
                     <img src="Assets/Icons/white_menu_icon.svg" alt="menu-icon" id="menu" class="w-[1.5rem] cursor-pointer">
                     <div id="mobileMenu" class="fixed inset-0 bg-[rgba(194,118,133,0.8)] justify-start items-start p-5 z-10 hidden">
                         <ul class="bg-white text-gray-800 w-3/4 h-[90vh] p-5 space-y-6 slide-in">
                             <li class="flex justify-between items-center border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
-                                <span>Home</span>
+                                <a href="index.html">Home</a>
                                 <img src="Assets/Icons/close-icon.svg" alt="close-icon" class="w-5 h-5 cursor-pointer" id="closeDropdown">
                             </li>
                             <li class="border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
-                                <a href="#">About Us</a>
+                                <a href="about_page.html">About Us</a>
                             </li>
                             <li class="border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
                                 <a href="#">catalogue</a>
@@ -82,39 +82,140 @@
             <h1 class=" lg:w-[65rem] lg:text-[8rem] text-[4rem] font-bold lg:leading-[8rem] leading-[5rem]">Welcome to Mopelola Cakes and events</h1>
         </div>       
     </header>
-    <main>
-        <section class="bg-gray-100 py-12">
+    <main class="bg-gray-100">
+        <section class=" py-12">
             <div class="container mx-auto px-6 lg:px-8">
                 <h2 class="text-5xl lg:text-6xl font-bold text-[#ec499a] mb-8 text-center">About Us</h2>
-                <div class="lg:w-[50%] bg-white text-gray-700 p-8 rounded-lg shadow-lg font-[Inika]">
-                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                        Have you ever wondered what makes a celebration truly unforgettable? At Mopelola Cakes and Events, we believe it's the perfect blend of sweet treats, meticulous planning, and heartfelt moments.
-                    </p>
-                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                        Our journey began with a simple love for baking and a dream to bring joy to every celebration. What started as a small venture in our kitchen has blossomed into a full-fledged bakery and event planning service, dedicated to making your special moments extraordinary.
-                    </p>
-                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                        From birthdays and weddings to corporate events and casual gatherings, our passion for perfection ensures that every cake is a masterpiece and every event is meticulously planned. We are committed to using the finest ingredients, creative designs, and a touch of love in everything we do.
-                    </p>
-                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                        Why settle for ordinary when you can have extraordinary? Our cakes are not just desserts; they are a piece of art that tells your story. As Julia Child once said, "A party without cake is just a meeting." We couldn't agree more.
-                    </p>
-                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                        At Mopelola Cakes and Events, we are more than just a bakery. We are your partners in creating unforgettable memories. Our team of skilled bakers, designers, and event planners work tirelessly to ensure that your vision comes to life, exactly as you imagined it.
-                    </p>
-                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                        What’s a celebration without a touch of magic? We invite you to experience the magic of Mopelola Cakes and Events, where every occasion is transformed into a cherished memory. Join us on this sweet journey and let us be a part of your special moments.
-                    </p>
-                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                        Because at the end of the day, it’s not just about the cake; it’s about the love, joy, and memories we create together. So, the next time you think of celebrating, think of us. Let’s make every moment count.
-                    </p>
-                    <p class="text-gray-700 text-lg leading-relaxed text-center">
-                        "Life is short. Eat the cake. Celebrate often." – Anonymous
-                    </p>
+                <div class="flex flex-row">
+                    <div class="lg:w-[50%] bg-white text-gray-700 p-8 rounded-l-lg shadow-lg font-[Inika]">
+                        <img src="Assets/About_page_assets/Baker_on_purple_apron_holding_fishroll.jpg" alt="Baker_on_purple_apron_holding_fishroll" class="rounded-xl lg:hidden flex mb-6">
+                        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                            Have you ever wondered what makes a celebration truly unforgettable? At Mopelola Cakes and Events, we believe it's the perfect blend of sweet treats, meticulous planning, and heartfelt moments. We are committed to using the finest ingredients, creative designs, and a touch of love in everything we do.
+                        </p>
+                        <!-- <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                            Our journey began with a simple love for baking and a dream to bring joy to every celebration. What started as a small venture in our kitchen has blossomed into a full-fledged bakery and event planning service, dedicated to making your special moments extraordinary.
+                        </p> -->
+                        <!-- <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                            From birthdays and weddings to corporate events and casual gatherings, our passion for perfection ensures that every cake is a masterpiece and every event is meticulously planned. 
+                        </p> -->
+                        <!-- <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                            Why settle for ordinary when you can have extraordinary? Our cakes are not just desserts; they are a piece of art that tells your story. As Julia Child once said, "A party without cake is just a meeting." We couldn't agree more.
+                        </p> -->
+                        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                            We are more than just a bakery. We are your partners in creating unforgettable memories. Our team of skilled bakers, designers, and event planners work tirelessly to ensure that your vision comes to life, exactly as you imagined it.
+                        </p>
+                        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                            What’s a celebration without a touch of magic? We invite you to experience the magic of Mopelola Cakes and Events, where every occasion is transformed into a cherished memory. Join us on this sweet journey and let us be a part of your special moments.
+                        </p>
+                        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                            Because at the end of the day, it’s not just about the cake; it’s about the love, joy, and memories we create together. So, the next time you think of celebrating, think of us. Let’s make every moment count.
+                        </p>
+                        <p class="text-gray-700 text-lg leading-relaxed text-center">
+                            "Life is short. Eat the cake. Celebrate often." – Anonymous
+                        </p>
+                    </div>
+                    <div class="w-[50%] lg:flex hidden">
+                        <img src="Assets/About_page_assets/Baker_on_purple_apron_holding_fishroll.jpg" alt="Baker_on_purple_apron_holding_fishroll" class="rounded-r-lg">
+                    </div>
                 </div>
             </div>
         </section>
-          
+        <!-- Our Mission & Vision -->
+        <section class="bg-gray-100 py-12">
+            <div class="container mx-auto px-6 lg:px-8">
+                <h2 class="text-4xl lg:text-5xl font-bold text-center text-[#ec499a] mb-8">Our Mission & Vision</h2>
+                <div class="flex flex-wrap lg:flex-nowrap justify-between">
+                    <div class="w-full lg:w-1/2 p-4">
+                        <img src="Assets/About_page_assets/happy_waiter_serving_customer.jpg" alt="happy_waiter_serving_customer" class="rounded-lg mb-4">
+                        <h3 class="text-3xl font-semibold text-[#ec499a] mb-4"> Mission</h3>
+                        <p class="text-gray-700 text-lg leading-relaxed font-[Inika] text-left">
+                            Our mission is to create exquisite cakes and memorable events that bring joy and happiness to our customers. We strive for excellence in everything we do, from the quality of our ingredients to the level of our service.
+                        </p>
+                    </div>
+                    <div class="w-full lg:w-1/2 p-4">
+                        <img src="Assets/About_page_assets/cakes_in_show_glasses.jpg" alt="cakes_in_show_glasses" class="rounded-lg mb-4">
+                        <h3 class="text-3xl font-semibold text-[#ec499a] mb-4">Our Vision</h3>
+                        <p class="text-gray-700 text-lg leading-relaxed font-[Inika] text-left">
+                            Our vision is to be the premier provider of cakes and event services, known for our creativity, quality, and customer satisfaction. We aim to create lasting memories for every occasion, making every event a special one.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- What we offer -->
+        <section class="bg-[#FFDAB9] contaiiner lg:p-10 p-5">
+            <h5 class="text-[#ec499a] text-5xl font-extrabold w-fit m-auto">What we offer</h5>
+            <p class="font-[Inika] lg:w-[35rem] m-auto text-center my-10 text-gray-700">At Mopelola Cakes and Events, we offer a wide range of services to ensure your celebration is nothing short of perfect:</p>
+            <article class="container m-auto">
+                <ul class="flex-row lg:flex-wrap lg:overflow-x-hidden overflow-x-auto flex  scroll-smooth whitespace-wrap lg:mx-[2.7rem] lg:w-fit">
+                    <li class="lg:min-w-[25vw] min-w-[90vw] h-fit bg-[#FFF] p-6 rounded-2xl mb-10">
+                        <span class="text-[#ec499a] w-fit m-auto text-4xl font-bold flex text-center ">Custom Cakes:</span>
+                        <p class="font-[Inika] text-gray-700 text-[1rem text-right] my-5 lg:w-[20rem] m-auto">
+                            From classic designs to modern masterp- ieces, our custom cakes are tailored to your vision and taste. Have you ever seen a cake that perfectly captures the essence of a celebration? That’s what we strive to create. Each cake is a work of art, made with the finest ingredients and decorated to perfection. Whether it's a wedding, birthday, anniversary, or any special occasion, our cakes are designed to make your moments memorable.
+                        </p>
+                    </li>
+                    <li class="lg:min-w-[25vw] min-w-[90vw] lg:h-[24.6rem] bg-[#FFF] p-6 rounded-2xl mb-10 mx-6">
+                        <span class="text-[#ec499a] w-fit m-auto text-4xl font-bold flex text-center ">Event Planning:</span>
+                        <p class="font-[Inika] text-gray-700 text-[1rem text-right] my-5 lg:w-[20rem] m-auto">
+                            Why worry about the event planning details when you can leave them to us? Our team works tirelessly to plan and execute events that exceed your expectations. From venue selection and décor to entertainment and catering, we handle every aspect of your event with precision and care. Let us turn your vision into reality, creating an unforgettable experience for you and your guests.
+                        </p>
+                    </li>
+                    <li class="lg:min-w-[25vw] min-w-[90vw] lg:h-[24.6rem] bg-[#FFF] p-6 rounded-2xl mb-10 mr-6">
+                        <span class="text-[#ec499a] w-fit m-auto text-4xl font-bold flex text-center ">Catering Services:</span>
+                        <p class="font-[Inika] text-gray-700 text-[1rem text-right] my-10 lg:w-[20rem] m-auto">
+                            Wouldn't it be wonderful to have a spread that everyone talks about long after the event? From delectable pastries to gourmet hors d'oeuvres, our catering options are designed to delight. Whether it's a corporate event, family gathering, or an intimate party, our catering services ensure that your guests are treated to a culinary experience they won't forget.
+                        </p>
+                    </li>
+                    <li class="lg:min-w-[25vw] min-w-[90vw] lg:h-[24.6rem] bg-[#FFF] p-6 rounded-2xl mb-10 mr-6">
+                        <span class="text-[#ec499a] w-fit m-auto text-4xl font-bold flex text-center ">Specialty Desserts:</span>
+                        <p class="font-[Inika] text-gray-700 text-[1rem text-right] my-10 lg:w-[20rem] m-auto">
+                            Indulge in our range of specialty desserts that cater to all tastes and dietary needs. From gluten-free and vegan options to traditional favorites, we ensure that everyone at your celebration can enjoy something sweet and delicious. Our dessert tables are curated with a variety of treats, including cookies, brownies, macarons, and more.
+                        </p>
+                    </li>
+                    <li class="lg:min-w-[25vw] min-w-[90vw] lg:h-[24.6rem] bg-[#FFF] p-6 rounded-2xl mb-10 mr-6">
+                        <span class="text-[#ec499a] w-fit m-auto text-4xl font-bold flex text-center ">Baking Classes:</span>
+                        <p class="font-[Inika] text-gray-700 text-[1rem text-right] my-10 lg:w-[20rem] m-auto">
+                            Want to learn the art of baking? Join our baking classes and workshops where our expert bakers share their secrets. From beginners to advanced bakers, our classes are designed to be fun, educational, and hands-on. Learn how to bake and decorate cakes, pastries, and more, and take your baking skills to the next level.
+                        </p>
+                    </li>
+                    <li class="lg:min-w-[25vw] min-w-[90vw] lg:h-[24.6rem] bg-[#FFF] p-6 rounded-2xl mb-10 mr-0">
+                        <span class="text-[#ec499a] w-fit m-auto text-4xl font-bold flex text-center ">Corporate Gifting:</span>
+                        <p class="font-[Inika] text-gray-700 text-[1rem text-right] my-10 lg:w-[20rem] m-auto">
+                            Surprise your clients and employees with our custom corporate gifts. Our beautifully packaged baked goods make perfect gifts for holidays, corporate events, and thank-you gestures. Show your appreciation with a sweet touch that leaves a lasting impression.
+                        </p>
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <!-- Meet Mopelola -->
+        <section class=" py-12">
+            <div class="container mx-auto px-6 lg:px-2">
+                <h2 class="text-5xl lg:text-6xl font-bold text-[#ec499a] mb-8 text-center">Meet Mopelola</h2>
+                <div class="flex flex-row">
+                    <div class="lg:w-[50%] bg-white text-gray-700 p-8 rounded-l-lg shadow-lg font-[Inika]">
+                        <img src="Assets/About_page_assets/mopelol_holding_wedding_cake.jpg" alt="mopelol_holding_wedding_cake" class="rounded-xl lg:hidden flex mb-6">
+                        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                            Founded by Salman Shukroh Mopelola, a passionate baker with a knack for turning simple ingredients into works of art, our business is built on love, dedication, and a commitment to excellence. Mopelola's journey from a home baker to a celebrated cake artist is a testament to her hard work and unwavering passion for baking. She started in her kitchen, experimenting with recipes and perfecting her techniques. Over the years, her creations gained popularity through word-of-mouth, social media, and community events, leading her to establish Mopelola Cakes and Events.
+                        </p>
+                        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                            Have you ever met someone who can transform flour, sugar, and eggs into magic? That’s Mopelola. Her philosophy is simple: use the best ingredients, combine them with creativity and love, and the result will be extraordinary. She draws inspiration from various sources – nature, art, and even fashion – to create cakes that are as visually stunning as they are delicious. Her commitment to excellence means that every cake that leaves her kitchen is a testament to her skills and her passion for baking.
+                        </p>
+                        <p class="text-gray-700 text-lg leading-relaxed text-center">
+                            "Baking is love made visible." – Anonymous
+                        </p>
+                    </div>
+                    <div class="w-[50%] lg:flex flex-row hidden my-auto gap-5 mx-1">
+                        <div class="flex flex-col w-[50%] gap-10">
+                            <img src="Assets/About_page_assets/WhatsApp Image 2024-07-17 at 09.08.11_adf7f5cb.jpg" alt=" Chef-mopelola" class="rounded-xl">
+                            <img src="Assets/About_page_assets/mopelol_holding_wedding_cake.jpg" alt="mopelol_holding_wedding_cake" class="rounded-xl">
+                        </div>
+                        <video src="Assets/About_page_assets/mopelola_serving_cakes.mp4" autoplay loop muted   class="w-[50%] rounded-xl">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="bg-[#ec499a] text-white py-10">
         <section class="container mx-auto px-6">
