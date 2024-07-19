@@ -23,27 +23,27 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="flex flex-col h-[60vh] bg-[#ec499a] text-white">
-        <nav class="p-7 text-[2rem] font-bold ">
+    <header class="flex flex-col h-[90vh] bg-[#ec499a] text-white about-bg-overlay  " style="background-image: url(Assets/rice.jpg);">
+        <nav class="p-7 text-[2rem] font-bold z-10">
             <ul class="flex flex-row justify-between">
                 <div>
                     <li>Mopelola</li>
                 </div>
                 <div class="lg:flex flex-row hidden font-[Inika] text-[1rem] font-thin space-x-10">
-                    <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid">
-                        <a href="index.html">Home</a>
-                    </li>
+                    <a href="index.html" class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid">
+                        <li>Home</li>
+                    </a>
                     <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid">
                         <a href="about_page.html">About Us</a>
                     </li>
                     <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid">
-                        <a href="#">Catalogue</a>
+                        <a href="catalogue.html">Catalogue</a>
                     </li>
                     <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid">
                         <a href="#">Behind The Scene </a>
                     </li>
                     <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid">
-                        <a href="#">Order Online</a>
+                        <a href="order-online.html">Order Online</a>
                     </li>                   
                 </div>
                 <li class="lg:hidden flex font-[Inika] font-semibold text-[1.3rem]">
@@ -58,19 +58,19 @@
                                 <a href="about_page.html">About Us</a>
                             </li>
                             <li class="border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
-                                <a href="#">catalogue</a>
+                                <a href="catalogue.html">catalogue</a>
                             </li>
                             <li class="border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
-                                <a href="#">Client Testimonials</a>
+                                <a href="index.html#FEEDBACKS">Client Testimonials</a>
                             </li>
                             <li class="border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
                                 <a href="#">Behind The Scene </a>
                             </li>
                             <li class="border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
-                                <a href="#">Contact Us</a>
+                                <a href="index.html#Contact">Contact Us</a>
                             </li>
                             <li class="border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
-                                <a href="#">Order Online</a>
+                                <a href="./order-online.html">Order Online</a>
                             </li>                            
                         </ul>
                     </div>
@@ -90,46 +90,209 @@
                 <button class="px-4 py-2 mx-2 bg-pink-500 hover:bg-pink-950 text-white rounded">Catering Services</button>
             </article>
         </section>
+        <!-- Modal Container -->
+        <div id="imageModal" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center hidden">
+            <div class="modal-content max-w-3/4 bg-white rounded-lg shadow-lg overflow-hidden">
+                <span id="closeModalBtn" class="absolute top-0 right-0 m-6 text-white text-3xl cursor-pointer">&times;</span>
+                <img id="modalImg" class="w-full h-auto" src="" alt="Enlarged Image">
+            </div>
+        </div>
         <section>
             <h2 class="w-fit m-auto text-pink-500 text-[4rem] font-bold">Cakes</h2>
             <article class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Product Item -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="Assets/Pastries/Cakes/foil_cakes.jpg" alt="Product 1: foil_cakes" class="w-full h-64 object-cover">
+                    <img src="Assets/Pastries/Cakes/foil_cakes.jpg" alt="Product 1: foil_cakes" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)" onclick="updateOrderDetails('Assets/Pastries/Cakes/foil_cakes.jpg', 'Foil Cakes', '#1000.00', 'Moist and flavorful Foil Cakes, available in rich chocolate, vibrant red velvet, and more.')">
                     <div class="p-6">
-                        <div class="flex items-center justify-between ">
+                        <div class="flex items-center justify-between my-2">
                             <h2 class="text-3xl font-bold mb-2 text-pink-500">Foil Cakes</h2>
                             <span class="font-serif font-bold text-[1.5rem]">#1000.00</span>
                         </div>
-                        <p class="text-gray-700 font-[Inika]">
+                        <p class="text-gray-700 font-[Inika] my-4">
                             Moist and flavorful Foil Cakes, available in rich chocolate, vibrant red velvet, and more.
+                        </p>
+                        <a href="./order-online.html" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]" >
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="Assets/Pastries/Cakes/olori_akanbi_cake.jpg" alt="Product 2: olori_akanbi_cake" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Butter Icing Cake</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#10000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4" >A delightful butter icing cake, adorned with vibrant sprinkles and a personalized message.</p>
+                        <a href="order-link-here" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]">
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="./Assets/Pastries/Cakes/Wedding_cake.jpg" alt="Product 3: Wedding_cake" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Fondant Icing Cake</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#10000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">A Fondant icing wedding cake adorned with blue roses and a 'Mr & Mrs' topper.</p>
+                        <a href="order-link-here" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]">
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="./Assets/Pastries/Cakes/12 in 1 cup-cake.jpg" alt="Product 4:12 in 1 cup cake" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">12 in 1 cup Cake</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#10000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            A delightful assortment of 12 blue cupcakes, perfect for any celebration. </p>
+                        <a href="order-link-here" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]">
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="./Assets/Pastries/Cakes/Naked_sponge_cake.jpg" alt="Product 5:Naked_sponge_cake" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Naked Sponge Cake</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#10000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            Naked sponge cake, available in rich red velvet, classic vanilla flavors and more.</p>
+                        <a href="order-link-here" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]">
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+                <div class=" bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="./Assets/Pastries/Cakes/Blue_alabi_cake.jpg" alt="Product 6:Blue_alabi_cake" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Cartoon Cake</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#15000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            A rich butter icing cake with a fun cartoon topper, perfect for any celebration.</p>
+                        <a href="order-link-here" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]">
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class=" bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="./Assets/Pastries/Cakes/Naked_cake.jpg" alt="Product 7:Naked_cake" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Naked Cup Cake</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#300.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            A rustic naked cup cake, ideal for a natural and charming presentation.</p>
+                        <a href="order-link-here" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]">
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+                <div class=" bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="./Assets/Pastries/Cakes/Cake-parfait.jpg" alt="Product 8:Cake-parfait" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Cake Parfait</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#2500.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            A delightful cake crumbs layers with whipped cream, fruit, or pudding.</p>
+                        <a href="order-link-here" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]">
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+                <div class=" bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="./Assets/Pastries/Cakes/sliced_cakes.jpg" alt="Product 9:Creamed-sliced cake" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Creamed Sliced cake</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#1000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            A chocolate dessert with cream toppings.</p>
+                        <a href="order-link-here" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]">
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class=" bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="./Assets/Pastries/Cakes/sophia_cake.jpg" alt="Product 10:sophia cake" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Cartoon Cake (girls)</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#10000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            A beautifully decorated cake featuring Sophia and friends.    
                         </p>
                         <a href="order-link-here" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]">
                             Order Now
                         </a>
                     </div>
                 </div>
-    
-                <!-- Repeat Product Item for more products -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://via.placeholder.com/400" alt="Product 2" class="w-full h-64 object-cover">
+                <div class=" bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="./Assets/Pastries/Cakes/Red-round cake.jpg" alt="Product 11: Red-round cake" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)">
                     <div class="p-6">
-                        <h2 class="text-2xl font-bold mb-2">Product Name</h2>
-                        <p class="text-gray-700">A brief description of the product goes here. Make it enticing and informative.</p>
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Round Cake</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#3000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            Tantalizing red velvet cake. Available in an array of flavors like decadent chocolate, zesty lemon, and rich vanilla.    
+                        </p>
+                        <a href="order-link-here" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]">
+                            Order Now
+                        </a>
                     </div>
                 </div>
-    
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://via.placeholder.com/400" alt="Product 3" class="w-full h-64 object-cover">
+                <div class=" bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="./Assets/Pastries/Cakes/Bento_cake.jpg" alt="Product 11: Bento_cake" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)">
                     <div class="p-6">
-                        <h2 class="text-2xl font-bold mb-2">Product Name</h2>
-                        <p class="text-gray-700">A brief description of the product goes here. Make it enticing and informative.</p>
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Bento Cake</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#8000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            Heartfelt bento cake. Perfect for proposals, anniversaries, or any special moment worth celebrating.    
+                        </p>
+                        <a href="order-link-here" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]">
+                            Order Now
+                        </a>
                     </div>
                 </div>
-    
-                <!-- Add more products as needed -->
+
+                <div class=" bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="./Assets/Pastries/Cakes/Two_step_wedding_cake.jpg" alt="Product 11: Bento_cake" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Bento Cake</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#8000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            Heartfelt bento cake. Perfect for proposals, anniversaries, or any special moment worth celebrating.    
+                        </p>
+                        <a href="order-link-here" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]">
+                            Order Now
+                        </a>
+                    </div>
+                </div> 
             </article>
-        </div>
+        </section>
     </main>
+    <script src="./main.js"></script>
 </body>
 </html>
