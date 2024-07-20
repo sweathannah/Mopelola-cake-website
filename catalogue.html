@@ -22,7 +22,7 @@
     <title>Mopelola cakes and event</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="overflow-x-hidden">
     <header class="flex flex-col h-[90vh] bg-[#ec499a] text-white about-bg-overlay  " style="background-image: url(Assets/rice.jpg);">
         <nav class="p-7 text-[2rem] font-bold z-10">
             <ul class="flex flex-row justify-between">
@@ -86,7 +86,7 @@
         <section class="container mx-auto  pt-[3rem]">
             <article class="flex justify-center mb-4 font-[Inika] pb-[3rem] ">
                 <button class="px-4 py-2 mx-2 bg-pink-500 hover:bg-pink-950 text-white rounded">Cakes</button>
-                <button class="px-4 py-2 mx-2 bg-pink-500 hover:bg-pink-950 text-white rounded">Pastries</button>
+                <button class="px-4 py-2 mx-2 bg-pink-500 hover:bg-pink-950 text-white rounded" >Pastries</button>
                 <button class="px-4 py-2 mx-2 bg-pink-500 hover:bg-pink-950 text-white rounded">Catering Services</button>
             </article>
         </section>
@@ -97,7 +97,7 @@
                 <img id="modalImg" class="w-full h-auto" src="" alt="Enlarged Image">
             </div>
         </div>
-        <section>
+        <section class="p-4">
             <h2 class="w-fit m-auto text-pink-500 text-[4rem] font-bold">Cakes</h2>
             <article class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Product Item -->
@@ -320,6 +320,107 @@
                         </a>
                     </div>
                 </div> 
+            </article>
+        </section>
+
+        <section class="p-4">
+            <h2 class="w-fit m-auto text-pink-500 text-[4rem] font-bold py-10">Pastries</h2>
+            <article class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product Item -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="Assets/Pastries/Snacks/Meat_pie.jpg" alt="Product 1: Meat_pie" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Meat pie</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#1000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            A golden, flaky crust enveloping a rich filling of seasoned ground meat, often combined with vegetables like onions, carrots, and potatoes.
+                        </p>
+                        <a href="./order-online.html" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]" >
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="Assets/Pastries/Snacks/Packaged_milky_doughnut.jpg" alt="Product 2: doughnut" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)" >
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Milky doughnut</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#3000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            A delicious 3-in-1 filling of rich chocolate, creamy Nutella, and sweet milk. 
+                        </p>
+                        <a href="./order-online.html" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]" >
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="Assets/Pastries/Snacks/Small_chops.jpg" alt="Product 3: Mega small chops" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)" >
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Mega small chops</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#3000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            A mix of crispy samosas, spicy spring rolls, tender meat skewers, crunchy puff-puffs, and succulent chicken wings. 
+                        </p>
+                        <a href="./order-online.html" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]" >
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="Assets/Pastries/Snacks/Eggroll.jpg" alt="Product 4: Egg roll" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)" >
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Egg Roll</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#3000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            A perfectly boiled egg encased in a layer of seasoned dough, then deep-fried to golden perfection. 
+                        </p>
+                        <a href="./order-online.html" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]" >
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="Assets/Pastries/Snacks/Sugar doughnut.jpg" alt="Product 5: Sugar doughnut" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)" >
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Sugar doughnut</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#3000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            A soft, fluffy doughnut filled with sweet, tangy jam coated in fine sugar, adding a delightful crunch and extra sweetness to the doughnut.
+                            
+                        </p>
+                        <a href="./order-online.html" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]" >
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="Assets/Pastries/Snacks/3_in_1 milky doughnut.jpg" alt="Product 5: Sugar doughnut" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)" >
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">3-in-1 milky doughnut</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#3000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            A luscious 3-in-1 filling of smooth Nutella, and sweet milk cream also coated in a silky milk glaze that adds an extra layer of sweetness and a beautiful sheen.                            
+                        </p>
+                        <a href="./order-online.html" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]" >
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+
+                
             </article>
         </section>
     </main>

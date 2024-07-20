@@ -57,3 +57,11 @@ body {
 .slide-out {
     animation: slideOut 0.5s forwards;
 }
+
+
+.content-section {
+    display: none;
+}
+.content-section.active {
+    display: block;
+}
