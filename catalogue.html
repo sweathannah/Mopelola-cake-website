@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="overflow-x-hidden">
-    <header class="flex flex-col h-[90vh] bg-[#ec499a] text-white about-bg-overlay  " style="background-image: url(Assets/rice.jpg);">
+    <header class="flex flex-col h-[90vh] bg-[#ec499a] text-white bg-cover bg-center bg-no-repeat " style="background-image: url(https://i.pinimg.com/564x/a5/be/28/a5be28b0dca2aaf9eebc5152bf66e3c9.jpg);">
         <nav class="p-7 text-[2rem] font-bold z-10">
             <ul class="flex flex-row justify-between">
                 <div>
@@ -40,7 +40,7 @@
                         <a href="catalogue.html">Catalogue</a>
                     </li>
                     <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid">
-                        <a href="#">Behind The Scene </a>
+                        <a href="./behind_the_scene.html">Behind The Scene </a>
                     </li>
                     <li class="hover:border-b-[0.0625rem] hover:border-b-[#4E4D4D] hover:border-b-solid">
                         <a href="order-online.html">Order Online</a>
@@ -64,7 +64,7 @@
                                 <a href="index.html#FEEDBACKS">Client Testimonials</a>
                             </li>
                             <li class="border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
-                                <a href="#">Behind The Scene </a>
+                                <a href="./behind_the_scene.html">Behind The Scene </a>
                             </li>
                             <li class="border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
                                 <a href="index.html#Contact">Contact Us</a>
@@ -82,12 +82,12 @@
             <h1 class=" lg:w-[65rem] lg:text-[6rem] text-[4rem] font-bold">Our Catalogue</h1>
         </div>       
     </header>
-    <main class="bg-gray-100 px-8">
+    <main class="bg-gray-100 lg:px-8">
         <section class="container mx-auto  pt-[3rem]">
             <article class="flex justify-center mb-4 font-[Inika] pb-[3rem] ">
-                <button class="px-4 py-2 mx-2 bg-pink-500 hover:bg-pink-950 text-white rounded">Cakes</button>
-                <button class="px-4 py-2 mx-2 bg-pink-500 hover:bg-pink-950 text-white rounded" >Pastries</button>
-                <button class="px-4 py-2 mx-2 bg-pink-500 hover:bg-pink-950 text-white rounded">Catering Services</button>
+                <a href="./catalogue.html#Cake_section" class="px-4 py-2 mx-2 bg-pink-500 hover:bg-pink-950 text-white rounded w-fit flex items-center">Cakes</a>
+                <a href="./catalogue.html#Pastries_section" class="px-4 py-2 mx-2 bg-pink-500 hover:bg-pink-950 text-white rounded w-fit flex items-center" >Pastries</a>
+                <a href="./catalogue.html#Meals_section" class="px-4 py-2 mx-2 bg-pink-500 hover:bg-pink-950 text-white rounded w-fit flex items-center">Meals & Dishes</a>
             </article>
         </section>
         <!-- Modal Container -->
@@ -97,7 +97,7 @@
                 <img id="modalImg" class="w-full h-auto" src="" alt="Enlarged Image">
             </div>
         </div>
-        <section class="p-4">
+        <section class="p-4" id="Cake_section">
             <h2 class="w-fit m-auto text-pink-500 text-[4rem] font-bold">Cakes</h2>
             <article class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Product Item -->
@@ -322,8 +322,7 @@
                 </div> 
             </article>
         </section>
-
-        <section class="p-4">
+        <section class="p-4" id="Pastries_section">
             <h2 class="w-fit m-auto text-pink-500 text-[4rem] font-bold py-10">Pastries</h2>
             <article class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Product Item -->
@@ -420,10 +419,123 @@
                     </div>
                 </div>
 
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="Assets/Pastries/Snacks/bottled_chinchin.jpg" alt="Product 7: botttled chinchin" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)" >
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Bottled chinchin</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#3000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            A deep-fried dough, packaged conveniently in a bottle to maintain its freshness and crispiness.                         
+                        </p>
+                        <a href="./order-online.html" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]" >
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+
                 
             </article>
         </section>
+        <section class="p-4" id="Meals_section">
+            <h2 class="w-fit m-auto text-pink-500 text-[4rem] font-bold py-10">Meals & Dishes</h2>
+            <article class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product Item -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="Assets/Pastries/Food/WhatsApp Image 2024-07-19 at 19.08.13_95ec61d9.jpg" alt="Product 1: Agonyi Beans" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Ewa Agonyi</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#3000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            A hearty and nutritious dish made from beans cooked to perfection with spices, palm oil, and onions.
+                        </p>
+                        <a href="./order-online.html" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]" >
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="Assets/Pastries/Food/Food tray.jpg" alt="Product 1: Agonyi Beans" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Ewa Agonyi</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#3000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            A hearty and nutritious dish made from beans cooked to perfection with spices, palm oil, and onions.
+                        </p>
+                        <a href="./order-online.html" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]" >
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
     </main>
+    <footer class="bg-[#ec499a] text-white py-10">
+        <section class="container mx-auto px-6">
+          <article class="flex flex-wrap justify-between">
+                <!-- Contact Information -->
+                <div class="w-fit flex justify-between gap-5">
+                    <div class="lg:w-[30%] w-1/2 mb-6">
+                        <h4 class="font-bold text-3xl mb-4 text-gray-700">Contact Us</h4>
+                        <div class="font-[Inika]">
+                            <p>Address: Shop4 oloje estate junction Oke-fomo, Ilorin, Kwara State.</p>
+                            <a href="tel:+234812 537 2350" class="my-[1rem] block">Phone: (+234) 812 537 2350</a>
+                            <a href="mailto:Salimonshukurah246@gmail.com">Email: Salimonshukurah <br> 246@gmail.com</a>
+                        </div>
+                    </div>
+                    <!-- Quick Links -->
+                    <div class="lg:w-[30%] w-1/2 mb-6">
+                        <div class="w-fit mx-auto">
+                            <h4 class="font-bold text-3xl mb-4 text-gray-700">Quick Links</h4>
+                            <ul class="font-[Inika] space-y-3">
+                                <li class="mb-2"><a href="./index.html" class="hover:text-gray-300">Home</a></li>
+                                <li class="mb-2"><a href="./about_page.html" class="hover:text-gray-300">About Us</a></li>
+                                <li class="mb-2"><a href="./about_page.html#services" class="hover:text-gray-300">Services</a></li>
+                                <li class="mb-2"><a href="./catalogue.html" class="hover:text-gray-300">Gallery</a></li>
+                                <li class="mb-2"><a href="./index.html#Contact" class="hover:text-gray-300">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Newsletter Signup -->
+                <div class="lg:w-[30%] w-full lg:my-0 my-10">
+                    <h4 class="font-bold text-3xl text-gray-700 mb-4">Newsletter</h4>
+                    <p class="mb-4 font-[Inika]">Sign up for updates and promotions</p>
+                    <form class="font-[Inika]">
+                        <input type="email" placeholder="Your email" class="p-2 w-full mb-2 rounded text-gray-700 focus-within:border-[#ec499a]">
+                        <button type="submit" class="bg-white text-[#ec499a] py-2 px-4 rounded hover:bg-gray-200">Subscribe</button>
+                    </form>
+                </div>
+          </article>
+          <article class="flex flex-wrap justify-between mt-6">
+            <!-- Social Media Icons -->
+            <div class="w-full md:w-1/2 mb-6 md:mb-0">
+              <h4 class="font-bold text-2xl text-gray-700 mb-4">Follow Us</h4>
+              <div class="flex space-x-4">
+                <a href="https://web.facebook.com/shukurah.salimonalasinrin" class="hover:text-gray-300">
+                    <img src="Assets/Icons/white_facebook_icon.svg" alt="white_facebook_icon">
+                </a>
+                <a href="https://www.instagram.com/mopelola_cakes/" class="hover:text-gray-300">
+                    <img src="Assets/Icons/white_instagram_icon.svg" alt="white_instagram_icon">
+                </a>
+                <a href="https://www.tiktok.com/@mopelolacakes0" class="hover:text-gray-300">
+                    <img src="Assets/Icons/white_tiktok_icon.svg" alt="white_tiktok_icon">
+                </a>
+              </div>
+            </div>
+            <!-- Copyright Information -->
+            <div class="w-full md:w-1/2 text-right">
+              <p>&copy; 2024 Mopelola Cakes and Events. All rights reserved.</p>
+            </div>
+          </article>
+        </section>
+    </footer>
     <script src="./main.js"></script>
 </body>
 </html>
