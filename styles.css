@@ -65,3 +65,35 @@ body {
 .content-section.active {
     display: block;
 }
+
+.video-wrapper {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.video-thumbnail {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.video-thumbnail.expanded {
+    transform: scale(1.5);
+    z-index: 10;
+}
+#video-modal {
+    display: flex;
+}
+#video-modal.hidden {
+    display: none;
+}
+.video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    color: white;
+    text-align: center;
+}
+.video-wrapper:hover .video-overlay {
+    display: block;
+}

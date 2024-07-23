@@ -52,38 +52,42 @@ document.addEventListener('keydown', function(event) {
 });
 
 
+// Function to open modal with clicked video
+function openModal(videoElement) {
+    const modal = document.getElementById('video-modal');
+    const modalVideo = document.getElementById('modal-video');
 
-document.addEventListener('DOMContentLoaded', function() {
-    const cakesLink = document.getElementById('cakes-link');
-    const pastriesLink = document.getElementById('pastries-link');
-    const foodLink = document.getElementById('food-link');
-    
-    const cakesSection = document.getElementById('cakes-section');
-    const pastriesSection = document.getElementById('pastries-section');
-    const foodSection = document.getElementById('food-section');
-    
-    cakesLink.addEventListener('click', function(event) {
-        event.preventDefault();
-        showSection(cakesSection);
-    });
-    
-    pastriesLink.addEventListener('click', function(event) {
-        event.preventDefault();
-        showSection(pastriesSection);
-    });
-    
-    foodLink.addEventListener('click', function(event) {
-        event.preventDefault();
-        showSection(foodSection);
-    });
-    
-    function showSection(sectionToShow) {
-        cakesSection.classList.add('hidden');
-        pastriesSection.classList.add('hidden');
-        foodSection.classList.add('hidden');
-        
-        sectionToShow.classList.remove('hidden');
+    modal.classList.remove('hidden');
+    modalVideo.src = videoElement.querySelector('source').src;
+    document.body.classList.add('overflow-hidden'); // Disable scrolling on body
+}
+
+// Function to close modal
+function closeModal() {
+    const modal = document.getElementById('video-modal');
+    const modalVideo = document.getElementById('modal-video');
+
+    modal.classList.add('hidden');
+    modalVideo.src = '';
+    document.body.classList.remove('overflow-hidden'); // Enable scrolling on body
+}
+
+// Event listener for closing the modal with close button
+document.getElementById('closeModalBtn').addEventListener('click', closeModal);
+
+// Event listener for closing the modal when clicking outside the video
+document.getElementById('video-modal').addEventListener('click', function(event) {
+    if (event.target === this) {
+        closeModal();
     }
 });
+
+// Event listener for keyboard 'Esc' key to close modal
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeModal();
+    }
+});
+
 
 

@@ -14,39 +14,6 @@
     <link rel="shortcut icon" href="Assets/Icons/logo.jpg" type="image/x-icon">
     <title>Mopelola Cakes and Events</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .video-wrapper {
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-        .video-thumbnail {
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        .video-thumbnail.expanded {
-            transform: scale(1.5);
-            z-index: 10;
-        }
-        #video-modal {
-            display: flex;
-        }
-        #video-modal.hidden {
-            display: none;
-        }
-        .video-overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: none;
-            color: white;
-            text-align: center;
-        }
-        .video-wrapper:hover .video-overlay {
-            display: block;
-        }
-    </style>
 </head>
 <body class="bg-gray-100">
     <header class="flex flex-col h-[80vh] bg-[#ec499a] text-white">
@@ -111,22 +78,19 @@
         <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
             <!-- Video 1 -->
             <div class="relative video-wrapper">
-                <video class="w-full h-96 object-cover video-thumbnail" autoplay loop muted>
+                <video class="w-full h-96 object-cover video-thumbnail" autoplay loop muted onclick="openModal(this)">
                     <source src="Assets/customer relation.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-4 w-full">
-                    <h2 class="text-xl font-bold">Making the Perfect Cake</h2>
+                    <h2 class="text-xl font-bold">Crafting Delightful Customer Experiences</h2>
                     <p class="text-sm">Watch how we bake and decorate a cake from scratch.</p>
-                </div>
-                <div class="video-overlay">
-                    <button class="play-btn text-2xl text-white bg-black p-2 rounded">Play</button>
                 </div>
             </div>
 
             <!-- Video 2 -->
             <div class="relative video-wrapper">
-                <video class="w-full h-96 object-cover video-thumbnail" autoplay loop muted>
+                <video class="w-full h-96 object-cover video-thumbnail" autoplay loop muted onclick="openModal(this)">
                     <source src="Assets/Roasting chicken wings.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -134,14 +98,11 @@
                     <h2 class="text-xl font-bold">Decorating Techniques</h2>
                     <p class="text-sm">Learn about our unique decorating techniques.</p>
                 </div>
-                <div class="video-overlay">
-                    <button class="play-btn text-2xl text-white bg-black p-2 rounded">Play</button>
-                </div>
             </div>
 
             <!-- Video 3 -->
             <div class="relative video-wrapper">
-                <video class="w-full h-96 object-cover video-thumbnail" autoplay loop muted>
+                <video class="w-full h-96 object-cover video-thumbnail" autoplay loop muted onclick="openModal(this)">
                     <source src="Assets/Behind_the_scene/yoghurt in making.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -149,8 +110,17 @@
                     <h2 class="text-xl font-bold">Behind the Scenes Tour</h2>
                     <p class="text-sm">Take a tour of our bakery and meet the team.</p>
                 </div>
-                <div class="video-overlay">
-                    <button class="play-btn text-2xl text-white bg-black p-2 rounded">Play</button>
+            </div>
+
+            <!-- Video 4 -->
+            <div class="relative video-wrapper">
+                <video class="w-full h-96 object-cover video-thumbnail" autoplay loop muted onclick="openModal(this)">
+                    <source src="Assets/Behind_the_scene/cake decoration.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-4 w-full">
+                    <h2 class="text-xl font-bold">Behind the Scenes Tour</h2>
+                    <p class="text-sm">Take a tour of our bakery and meet the team.</p>
                 </div>
             </div>
         </section>
@@ -159,39 +129,13 @@
     <!-- Video Modal -->
     <div id="video-modal" class="fixed inset-0 bg-black bg-opacity-70 justify-center items-center hidden">
         <div class="relative w-full max-w-3xl mx-auto my-10 bg-white">
-            <button id="close-modal" class="absolute top-2 right-2 text-white bg-black p-2 rounded-full w-[10rem]">X</button>
+            <button id="closeModalBtn" class="absolute top-2 right-2 text-white bg-black p-2 rounded-full">X</button>
             <video id="modal-video" class="w-full" controls>
                 <source src="" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
     </div>
-
-    <script>
-        document.querySelectorAll('.video-thumbnail').forEach(video => {
-            video.addEventListener('click', function () {
-                this.classList.toggle('expanded');
-                const modal = document.getElementById('video-modal');
-                const modalVideo = document.getElementById('modal-video');
-                const src = this.querySelector('source').src;
-                modalVideo.src = src;
-                modal.classList.remove('hidden');
-            });
-        });
-
-        document.getElementById('close-modal').addEventListener('click', function () {
-            const modal = document.getElementById('video-modal');
-            const modalVideo = document.getElementById('modal-video');
-            modalVideo.src = '';
-            modal.classList.add('hidden');
-        });
-
-        document.querySelectorAll('.play-btn').forEach(button => {
-            button.addEventListener('click', function () {
-                const video = this.closest('.video-wrapper').querySelector('video');
-                video.paused ? video.play() : video.pause();
-            });
-        });
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
