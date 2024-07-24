@@ -91,3 +91,103 @@ document.addEventListener('keydown', function(event) {
 
 
 
+// Function to display diverse images based on the seleced one
+// function displayImage(){
+//     const productSelect = document.getElementById('product-select');
+//     const selectedProduct = productSelect.value;
+//     const productImage = document.getElementById('product-image');
+    
+//     let imageURL = "";
+
+//     if (selectedProduct == "foil_cakes"){
+//         imageURL = "Assets/Pastries/Cakes/foil_cakes.jpg"
+//     } else if (selectedProduct == "butter_icing_cake") {
+//         imageURL = "Assets/Pastries/Cakes/olori_akanbi_cake.jpg"
+//     } else if (selectedProduct == "fondant_icing_cake") {
+//         imageURL = "Assets/Pastries/Cakes/Wedding_cake.jpg"
+//     } else if (selectedProduct == "cupcakes") {
+//         imageURL = "Assets/Pastries/Cakes/12 in 1 cup-cake.jpg"
+//     } else if (selectedProduct == "naked_sponge_cake") {
+//         imageURL = "Assets/Pastries/Cakes/Naked_sponge_cake.jpg"
+//     } else if (selectedProduct == "cartoon_cake") {
+//         imageURL = "Assets/Pastries/Cakes/Blue_alabi_cake.jpg"
+//     } else if (selectedProduct == "naked_cake") {
+//         imageURL = "Assets/Pastries/Cakes/Naked_cake.jpg"
+//     } else if (selectedProduct == "cake_parfait") {
+//         imageURL = "Assets/Pastries/Cakes/Cake-parfait.jpg"
+//     } else if (selectedProduct == "creamed_sliced_cake") {
+//         imageURL = "Assets/Pastries/Cakes/sliced_cakes.jpg"
+//     } else {
+
+//     }
+
+//     defaultText = document.getElementById('default-text')
+//     if (imageURL){
+//         productImage.src = imageURL;
+//         productImage.classList.remove('hidden');
+//         defaultText.classList.add('hidden')
+//     } else {
+//         productImage.classList.add('hidden')
+//         defaultText.classList.remove('hidden')
+//     }
+    
+// }
+// displayImage()
+
+// function getQueryParam(param) {
+//     const urlParams = new URLSearchParams(window.location.search);
+//     return urlParams.get(param);
+// }
+
+// window.onload = function() {
+//     const product = getQueryParam('product');
+//     const productSelect = document.getElementById('product-select');
+
+//     if (product) {
+//         productSelect.value = product;
+//         displayImage();
+//     }
+// }
+
+function displayImage() {
+    const productSelect = document.getElementById('product-select');
+    const selectedProduct = productSelect.value;
+    const productImage = document.getElementById('product-image');
+    const defaultText = document.getElementById('default-text');
+    
+    const productImages = {
+        "foil_cakes": "Assets/Pastries/Cakes/foil_cakes.jpg",
+        "butter_icing_cake": "Assets/Pastries/Cakes/olori_akanbi_cake.jpg",
+        "fondant_icing_cake": "Assets/Pastries/Cakes/Wedding_cake.jpg",
+        "cupcakes": "Assets/Pastries/Cakes/12 in 1 cup-cake.jpg",
+        "naked_sponge_cake": "Assets/Pastries/Cakes/Naked_sponge_cake.jpg",
+        "cartoon_cake": "Assets/Pastries/Cakes/Blue_alabi_cake.jpg",
+        "naked_cake": "Assets/Pastries/Cakes/Naked_cake.jpg",
+        "cake_parfait": "Assets/Pastries/Cakes/Cake-parfait.jpg",
+        "creamed_sliced_cake": "Assets/Pastries/Cakes/sliced_cakes.jpg"
+    };
+
+    if (productImages[selectedProduct]) {
+        productImage.src = productImages[selectedProduct];
+        productImage.classList.remove('hidden');
+        defaultText.classList.add('hidden');
+    } else {
+        productImage.classList.add('hidden');
+        defaultText.classList.remove('hidden');
+    }
+}
+
+function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+}
+
+window.onload = function() {
+    const product = getQueryParam('product');
+    const productSelect = document.getElementById('product-select');
+
+    if (product) {
+        productSelect.value = product;
+        displayImage();
+    }
+}
