@@ -18,7 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
 function openModal(imgElement) {
     const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('modalImg');
-
+    
+    modal.classList.add('show')
     modal.classList.remove('hidden');
     modalImg.src = imgElement.src;
     document.body.classList.add('overflow-hidden'); // Disable scrolling on body
@@ -29,11 +30,11 @@ function closeModal() {
     const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('modalImg');
 
+    modal.classList.remove('show')
     modal.classList.add('hidden');
     modalImg.src = '';
     document.body.classList.remove('overflow-hidden'); // Enable scrolling on body
 }
-
 // Event listener for closing the modal with close button
 document.getElementById('closeModalBtn').addEventListener('click', closeModal);
 
@@ -52,42 +53,7 @@ document.addEventListener('keydown', function(event) {
 });
 
 
-// Function to open modal with clicked video
-function openModal(videoElement) {
-    const modal = document.getElementById('video-modal');
-    const modalVideo = document.getElementById('modal-video');
 
-    modal.classList.remove('hidden');
-    modalVideo.src = videoElement.querySelector('source').src;
-    document.body.classList.add('overflow-hidden'); // Disable scrolling on body
-}
-
-// Function to close modal
-function closeModal() {
-    const modal = document.getElementById('video-modal');
-    const modalVideo = document.getElementById('modal-video');
-
-    modal.classList.add('hidden');
-    modalVideo.src = '';
-    document.body.classList.remove('overflow-hidden'); // Enable scrolling on body
-}
-
-// Event listener for closing the modal with close button
-document.getElementById('closeModalBtn').addEventListener('click', closeModal);
-
-// Event listener for closing the modal when clicking outside the video
-document.getElementById('video-modal').addEventListener('click', function(event) {
-    if (event.target === this) {
-        closeModal();
-    }
-});
-
-// Event listener for keyboard 'Esc' key to close modal
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-        closeModal();
-    }
-});
 
 
 
@@ -164,7 +130,13 @@ function displayImage() {
         "cartoon_cake": "Assets/Pastries/Cakes/Blue_alabi_cake.jpg",
         "naked_cake": "Assets/Pastries/Cakes/Naked_cake.jpg",
         "cake_parfait": "Assets/Pastries/Cakes/Cake-parfait.jpg",
-        "creamed_sliced_cake": "Assets/Pastries/Cakes/sliced_cakes.jpg"
+        "creamed_sliced_cake": "Assets/Pastries/Cakes/sliced_cakes.jpg",
+        "cartoon_cake(girls)": "Assets/Pastries/Cakes/sophia_cake.jpg",
+        "round-cake": "Assets/Pastries/Cakes/Red-round cake.jpg",
+        "Bento_cake": "Assets/Pastries/Cakes/Bento_cake.jpg",
+        "wedding_cake": "Assets/Pastries/Cakes/Two_step_wedding_cake.jpg",
+        "floral_cake": "Assets/Pastries/Cakes/white cake with pink flowers.jpg",
+        "graduation_crayon_cake": "Assets/Pastries/Cakes/Graduation_cake.jpg"
     };
 
     if (productImages[selectedProduct]) {
@@ -191,3 +163,28 @@ window.onload = function() {
         displayImage();
     }
 }
+
+
+function toggleDropdown() {
+            document.getElementById("dropdown-content").classList.toggle("hidden");
+        }
+
+        function selectProduct(value, text) {
+            document.getElementById("selected-product-text").innerText = text;
+            document.getElementById("selected-product-text").dataset.value = value;
+            toggleDropdown();
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown-button') && !event.target.matches('.dropdown-content div')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (!openDropdown.classList.contains('hidden')) {
+                        openDropdown.classList.add('hidden');
+                    }
+                }
+            }
+        }
+
+

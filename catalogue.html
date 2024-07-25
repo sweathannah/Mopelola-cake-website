@@ -21,9 +21,10 @@
     <link rel="shortcut icon" href="Assets/Icons/logo.jpg" type="image/x-icon">
     <title>Mopelola cakes and event</title>
     <link rel="stylesheet" href="styles.css">
+
 </head>
 <body class="overflow-x-hidden">
-    <header class="flex flex-col h-[90vh] bg-[#ec499a] text-white bg-cover bg-center bg-no-repeat " style="background-image: url(https://i.pinimg.com/564x/a5/be/28/a5be28b0dca2aaf9eebc5152bf66e3c9.jpg);">
+    <header class="flex flex-col h-[90vh] bg-[#ec499a] text-white bg-cover bg-center bg-no-repeat " style="background-image: url(./Assets/catalogue_background_image.jpg);">
         <nav class="p-7 text-[2rem] font-bold z-10">
             <ul class="flex flex-row justify-between">
                 <div>
@@ -58,7 +59,7 @@
                                 <a href="about_page.html">About Us</a>
                             </li>
                             <li class="border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
-                                <a href="catalogue.html">catalogue</a>
+                                <a href="catalogue.html">Catalogue</a>
                             </li>
                             <li class="border-b-[0.0625rem] border-b-[#4E4D4D] border-b-solid">
                                 <a href="index.html#FEEDBACKS">Client Testimonials</a>
@@ -91,7 +92,7 @@
             </article>
         </section>
         <!-- Modal Container -->
-        <div id="imageModal" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center hidden">
+        <div id="imageModal" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 justify-center flex items-center hidden">
             <div class="modal-content max-w-3/4 bg-white rounded-lg shadow-lg overflow-hidden">
                 <span id="closeModalBtn" class="absolute top-0 right-0 m-6 text-white text-3xl cursor-pointer">&times;</span>
                 <img id="modalImg" class="w-full h-auto" src="" alt="Enlarged Image">
@@ -102,7 +103,7 @@
             <article class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Product Item -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="Assets/Pastries/Cakes/foil_cakes.jpg" alt="Product 1: foil_cakes" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)" onclick="updateOrderDetails('Assets/Pastries/Cakes/foil_cakes.jpg', 'Foil Cakes', '#1000.00', 'Moist and flavorful Foil Cakes, available in rich chocolate, vibrant red velvet, and more.')">
+                    <img src="Assets/Pastries/Cakes/foil_cakes.jpg" alt="Product 1: foil_cakes" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)">
                     <div class="p-6">
                         <div class="flex items-center justify-between my-2">
                             <h2 class="text-3xl font-bold mb-2 text-pink-500">Foil Cakes</h2>
@@ -434,12 +435,87 @@
                         </a>
                     </div>
                 </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="Assets/Pastries/Snacks/muffins.jpg" alt="Product 8: Muffins" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)" >
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Muffins</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#1000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            Golden, cupcake-sized muffins studded with rich chocolate chips.                         
+                        </p>
+                        <a href="./order-online.html" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]" >
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="Assets/Pastries/Snacks/Pan cake.jpg" alt="Product 9: Pan Cake" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)" >
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Pan Cake</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#1000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            Light and fluffy pancakes, golden brown and served elegantly on a plate, ready to be enjoyed with your favorite toppings.                         
+                        </p>
+                        <a href="./order-online.html" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]" >
+                            Order Now
+                        </a>
+                    </div>
+                </div>
 
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="Assets/Pastries/Snacks/Sharwama.jpg" alt="Product 9: Sharwama" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)" >
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Sharwama</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#3000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            Savory shawarma wrapped in warm, soft flatbread, filled with perfectly seasoned meats, fresh veggies, and creamy sauces.                        
+                        </p>
+                        <a href="./order-online.html" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]" >
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="Assets/Pastries/Snacks/Pancake  with toppings.jpg" alt="Product 11: pancakes with toppings" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)" >
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Pancake Tower</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#3000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            Fluffy, golden-brown pancakes stacked high and drizzled with maple syrup.                   
+                        </p>
+                        <a href="./order-online.html" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]" >
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="Assets/Pastries/Snacks/Chinchin_in_jar.jpg" alt="Product 12: Chinchin_in_jar" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)" >
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Chinchin Jar</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#3000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            Crispy, golden-brown chinchin, neatly arranged in a jar, offering a delightful crunch.
+                        </p>
+                        <a href="./order-online.html" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]" >
+                            Order Now
+                        </a>
+                    </div>
+                </div>
                 
             </article>
         </section>
         <section class="p-4" id="Meals_section">
-            <h2 class="w-fit m-auto text-pink-500 text-[4rem] font-bold py-10">Meals & Dishes</h2>
+            <h2 class="w-fit m-auto text-pink-500 lg:text-[4rem] text-[3rem] text-center font-bold py-10">Meals & Dishes</h2>
             <article class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Product Item -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
@@ -481,6 +557,104 @@
                         </div>
                         <p class="text-gray-700 font-[Inika] my-4">
                             A delicious combination of jollof rice, fried rice, crisp salad, flavorful moi moi, and succulent chicken. 
+                        </p>
+                        <a href="./order-online.html" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]" >
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="Assets/Pastries/Food/Vegetable soup.jpg" alt="Product 4: Plate of African Efo" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Efo Delight</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#3000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            African vegetables simmered to perfection with rich spices and savory ingredients. 
+                        </p>
+                        <a href="./order-online.html" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]" >
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="Assets/Pastries/Food/white_rice and stew.jpg" alt="Product 5: Plate of white rice along side stew" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Rice and Stew</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#4000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            A generous serving of white rice accompanied by a variety of rich, flavorful stews 
+                        </p>
+                        <a href="./order-online.html" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]" >
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="Assets/Pastries/Food/Ewa agonyi rich plate.jpg" alt="Product 5: Plate of white rice along side stew" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Agoyin Feast</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#3000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            Creamy mashed beans (ewa agoyin) paired with generous portions of golden plantains, crispy fried fish, and savory ponnmo (cow skin). 
+                        </p>
+                        <a href="./order-online.html" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]" >
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="p-4" id="Drinks_section">
+            <h2 class="w-fit m-auto text-pink-500 text-[4rem] font-bold py-10">Drinks</h2>
+            <article class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product Item -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="Assets/Pastries/Drinks/3 fruit Zobo.jpg" alt="Product 1: Agonyi Beans" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Ewa Agonyi</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#3000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            A hearty and nutritious dish made from beans cooked to perfection with spices, palm oil, and onions.
+                        </p>
+                        <a href="./order-online.html" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]" >
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="Assets/Pastries/Drinks/Yoghurt.jpg" alt="Product 2: Food tray" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Food tray</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#15000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            A diverse food tray, that consist of creamy yogurt, aromatic coconut rice savory fried rice and lot more. 
+                        </p>
+                        <a href="./order-online.html" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]" >
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="Assets/Pastries/Drinks/Served-Zobo.jpg" alt="Product 2: Food tray" class="w-full h-72 object-cover cursor-pointer" onclick="openModal(this)">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between my-2">
+                            <h2 class="text-3xl font-bold mb-2 text-pink-500">Food tray</h2>
+                            <span class="font-serif font-bold text-[1.5rem]">#15000.00</span>
+                        </div>
+                        <p class="text-gray-700 font-[Inika] my-4">
+                            A diverse food tray, that consist of creamy yogurt, aromatic coconut rice savory fried rice and lot more. 
                         </p>
                         <a href="./order-online.html" class="order-button bg-[#ec499a] hover:bg-pink-950 text-white py-2 px-4 rounded mt-3 inline-block font-[Inika]" >
                             Order Now

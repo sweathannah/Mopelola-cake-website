@@ -83,67 +83,70 @@
         </div>       
     </header>
     <main>
-        <div class="max-w-4xl mx-auto p-8 bg-white shadow-md rounded-lg mt-12" id="order-page">
-            
+        <div class="max-w-4xl mx-auto p-8 bg-white shadow-md rounded-lg my-12" id="order-page">
             <!-- Product Image -->
             <div id="product-image-container" class="mb-4 w-full h-72 object-cover rounded-lg shadow-md bg-gray-200 flex items-center justify-center">
                 <img id="product-image" src="" alt="Product Image" class="hidden w-[65%] h-full object-cover rounded-lg">
-                <span id="default-text" class="text-gray-700 justify">Please select a product to view the image</span>
+                <span id="default-text" class=" justify lg:text-[2rem] text-[1.6rem] text-[#ec499a] lg:font-extrabold font-semibold text-center">Please select a product to view the image</span>
             </div>
-            
-
             <!-- Product Selection Dropdown -->
             <div class="mb-4">
-                <label for="product-select" class="block text-gray-700 font-semibold mb-2">Select a Product:</label>
-                <select id="product-select" onchange="displayImage()" class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-pink-500">
-                    <option value="" disabled selected>Select a product</option>
-                    <option value="foil_cakes">Foil Cakes - #1000.00</option>
-                    <option value="butter_icing_cake">Butter Icing Cake - #10000.00</option>
-                    <option value="fondant_icing_cake">Fondant Icing Cake - #10000.00</option>
-                    <option value="cupcakes">12 in 1 Cup Cake - #10000.00</option>
-                    <option value="naked_sponge_cake">Naked Sponge Cake - #10000.00</option>
-                    <option value="cartoon_cake">Cartoon Cake - #15000.00</option>
-                    <option value="naked_cake">Naked Cake - #300.00</option>
-                    <option value="cake_parfait">Cake Parfait - #2500.00</option>
-                    <option value="creamed_sliced_cake">Creamed Sliced Cake - #1000.00</option>
+                <label for="product-select" class="block mb-2 text-[1.5rem] text-[#ec499a] font-semibold ">Select a Product:</label>
+                <select id="product-select" onchange="displayImage()" required  class="custom-select w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none font-serif text-gray-700 leading-6 shadow-lg transition duration-300 ease-in-out transform hover:scale-100 hover:shadow-xl">
+                    <div class="bg-[#ec499a]">
+                        <option value="" disabled selected>Select a product</option>
+                        <option value="foil_cakes" class="text-gray-900">Foil Cakes - #1000.00</option>
+                        <option value="butter_icing_cake" class="text-gray-900">Butter Icing Cake - #10000.00</option>
+                        <option value="fondant_icing_cake" class="text-gray-900">Fondant Icing Cake - #10000.00</option>
+                        <option value="cupcakes" class="text-gray-900">12 in 1 Cup Cake - #10000.00</option>
+                        <option value="naked_sponge_cake" class="text-gray-900">Naked Sponge Cake - #10000.00</option>
+                        <option value="cartoon_cake" class="text-gray-900">Cartoon Cake - #15000.00</option>
+                        <option value="naked_cake" class="text-gray-900">Naked Cake - #300.00</option>
+                        <option value="cake_parfait" class="text-gray-900">Cake Parfait - #2500.00</option>
+                        <option value="creamed_sliced_cake" class="text-gray-900">Creamed Sliced Cake - #1000.00</option>
+                        <option value="cartoon_cake(girls)" class="text-gray-900">Cartoon Cake(female preference) - #10000</option>
+                        <option value="round-cake" class="text-gray-900">Round Cake - #3000</option>
+                        <option value="Bento_cake" class="text-gray-900">Bento Cake - #8000</option>
+                        <option value="wedding_cake">Wedding Cake -  #28000</option>
+                        <option value="floral_cake">Floral Cake - #10000</option>
+                        <option value="graduation_crayon_cake"> Graduation Crayon Cake -  #10000</option>
+                        <option value=""></option>
+                    </div>
                 </select>
-                
-            </div>
-        
-            
-        
-            <!-- Product Details -->
-            <div class="text-center">
-                <h2 id="product-title" class="text-3xl font-bold text-pink-500 mb-2"></h2>
-                <p id="product-price" class="text-gray-700 font-semibold mb-4"></p>
-                <p id="product-description" class="text-gray-700 mb-4"></p>
-            </div>
+            </div>        
+         
         
             <!-- Order Form -->
-            <form action="#" method="POST" class="bg-gray-200 rounded-lg p-6 mt-4">
+            <form action="#" id="orderForm" class="bg-gray-200 rounded-lg p-6 mt-4" onsubmit="handleFormSubmit(event)">
                 <div class="mb-4">
-                    <label for="name" class="block text-gray-700 font-semibold mb-2">Your Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-pink-500">
+                    <label for="name" class="block mb-2 text-[1.3rem] text-[#ec499a] font-semibold ">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-pink-500  text-gray-700 font-[Inika]">
                 </div>
                 <div class="mb-4">
-                    <label for="email" class="block text-gray-700 font-semibold mb-2">Your Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-pink-500">
+                    <label for="email" class="block  mb-2 text-[1.3rem] text-[#ec499a] font-semibold">Your Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-pink-500 font-[Inika]">
                 </div>
                 <div class="mb-4">
-                    <label for="phone" class="block text-gray-700 font-semibold mb-2">Your Phone:</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-pink-500">
+                    <label for="phone" class="block text-[1.3rem] text-[#ec499a] font-semibold mb-2">Your Phone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-pink-500 font-[Inika]">
                 </div>
                 <div class="mb-4">
-                    <label for="message" class="block text-gray-700 font-semibold mb-2">Additional Message:</label>
-                    <textarea id="message" name="message" placeholder="Any special instructions or requests?" class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-pink-500"></textarea>
+                    <label for="message" class="block text-[1.3rem] text-[#ec499a] font-semibold mb-2">Additional Message:</label>
+                    <textarea id="message" name="message" placeholder="Any special instructions or requests?" class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-pink-500 font-[Inika]"></textarea>
                 </div>
                 <div class="text-center">
                     <button type="submit" class="bg-pink-500 hover:bg-pink-600 text-white font-semibold px-6 py-2 rounded-lg transition-colors duration-300">Place Order</button>
                 </div>
             </form>
+            <!-- Modal -->
+            <div id="success-modal" class="modal fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 flex items-center justify-center hidden">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <h2 class="text-[2rem] font-bold text-pink-500">Order Submitted Successfully!</h2>
+                    <p class="text-gray-600 mt-2 font-[Inika]">Thank you for your order. We will get back to you soon.</p>
+                    <button onclick="closeSuccessModal()" class="mt-4 bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded">Close</button>
+                </div>
+            </div>
         </div>
-        
-        
     </main>
     <footer class="bg-[#ec499a] text-white py-10">
         <section class="container mx-auto px-6">
@@ -205,6 +208,29 @@
           </article>
         </section>
     </footer>
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Simulate form submission with a delay
+            setTimeout(() => {
+                document.getElementById('success-modal').classList.add('show');
+                document.body.classList.add('overflow-hidden')
+                resetForm()
+            }, 100);
+        }
+
+        function resetForm() {
+            const form = document.getElementById('orderForm');
+            form.reset(); // Reset the form fields
+        }
+        function closeSuccessModal() {
+            const button = document.getElementById('success-modal');
+            button.classList.remove('show');
+            document.body.classList.remove('overflow-hidden');
+        }
+    </script>
+
     <script src="./main.js"></script>
     <script>AOS.init();</script>
 </body>

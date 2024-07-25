@@ -97,3 +97,46 @@ body {
 .video-wrapper:hover .video-overlay {
     display: block;
 }
+
+.custom-select:hover {
+    border-color: #ec4899; /* Pink border on hover */
+}
+
+.custom-select:focus {
+    outline: none;
+    border-color: #ec4899; /* Pink border on focus */
+    box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.3); /* Pink shadow on focus */
+}
+
+.dropdown-button::after {
+    content: '';
+    display: inline-block;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+    border-width: 0.25rem;
+    border-style: solid;
+    border-color: currentColor transparent transparent transparent;
+}
+
+.dropdown-content {
+    display: none;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+            -webkit-box-shadow: 0 0 0 30px #f5f2f3 inset !important; /* change #fff to your desired background color */
+            -webkit-text-fill-color: #000 !important; /* change #000 to your desired text color */
+        }
+
+.modal {
+    display: none;
+}
+.modal.show {
+    display: flex;
+}
